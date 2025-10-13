@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexCoders </title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="style.css">
+ <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <style>
+
+.section1{
+   margin-top: 10%;
+    height: 70vh;
+}
+.section1 h4{
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1em;
+    margin-bottom: 3%;
+}
+.section1 h1{
+    font-size: 4em;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-shadow: 0px 10px 20px grey;
+}
+/* ---------- Default (Light Theme) ---------- */
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.about-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  max-width: 1100px;
+  width: 100%;
+  transition: background 0.3s, color 0.3s;
+}
+
+.about-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.about-left {
+  flex: 1;
+  min-width: 280px;
+  padding-right: 20px;
+}
+
+.about-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.small-heading {
+  color: #888;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.main-heading {
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1.3;
+  color: #000;
+}
+
+.about-right p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.divider {
+  border: none;
+  border-top: 1px dashed #aaa;
+  margin: 20px 0;
+}
+
+.about-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ========= Responsive Breakpoints ========= */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+  .main-heading {
+    font-size: 32px;
+  }
+  .about-card {
+    padding: 30px;
+  }
+}
+
+/* Large mobiles & small tablets */
+@media (max-width: 768px) {
+  .about-top {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-left, .about-right {
+    padding-right: 0;
+    min-width: 100%;
+  }
+  .main-heading {
+    font-size: 28px;
+  }
+  .about-right p {
+    font-size: 15px;
+  }
+  .about-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+/* Medium mobiles (iPhone, Pixel, Galaxy) */
+@media (max-width: 480px) {
+  .about-card {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .main-heading {
+    font-size: 24px;
+  }
+  .small-heading {
+    font-size: 14px;
+  }
+  .about-right p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* Small mobiles (320px – older iPhones/Android) */
+@media (max-width: 360px) {
+  .main-heading {
+    font-size: 20px;
+  }
+  .about-right p {
+    font-size: 13px;
+  }
+}
+
+
+.social-text h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+}
+
+.social-text span {
+  color: red;
+  font-size: 22px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 2px solid #000;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  transition: 0.3s;
+  background: transparent;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ---------- Dark Theme ---------- */
+body.dark .about-card {
+  background: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 5px 20px rgba(255,255,255,0.1);
+}
+
+body.dark .main-heading {
+  color: #fff;
+}
+
+body.dark .small-heading {
+  color: #bbb;
+}
+
+body.dark .about-right p {
+  color: #ccc;
+}
+
+body.dark .divider {
+  border-top: 1px dashed #555;
+}
+
+body.dark .social-text h3 {
+  color: #fff;
+}
+
+body.dark .btn {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+body.dark .btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+
+
+/* Scope only inside .stats-section */
+.stats-section {
+  padding-top: 5%;
+}
+
+.stats-container {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stats-card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  overflow: hidden; /* keeps bars inside */
+}
+
+.stats-card h4 {
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.stats-card h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.stats-card p {
+  color: gray;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* Wrapper to hold bars + count */
+.count-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* space between bar and count */
+  margin-top: 30px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.count {
+  font-size: 3em;
+  font-weight: bold;
+  color: #8a4af3;
+  text-align: center;
+  z-index: 2;
+}
+
+.bluebar {
+   height: 3vh;
+  background: #ccb6ee;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 250px;
+  position: relative;
+}
+
+.leftToRight {
+  top: 50%;
+  left: 0;
+  animation: slideRight 4s linear infinite;
+}
+
+.rightToLeft {
+  bottom: 27%;
+  right: 0;
+  animation: slideLeft 4s linear infinite;
+}
+
+@keyframes slideRight {
+  0%   { left: -80px; }
+  100% { left: 100%; }
+}
+
+@keyframes slideLeft {
+  0%   { right: -80px; }
+  100% { right: 100%; }
+}
+
+.reviews-box {
+  border: 2px solid white;
+  box-shadow: 0px 0px 5px 1px grey;
+  border-radius: 10px;
+  height: 10vh;      
+  width: 12vw;        
+  font-size: 0.7em;    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;           
+  padding: 8px;                   
+  background: #fff;    
+  margin: 25px auto 0;
+}
+
+.reviews-box p {
+  margin: 0;           
+  font-weight: 600;    
+  text-align: center;  
+}
+
+.logo-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: 180px;
+}
+
+.logos {
+  display: inline-block;
+  animation: scroll 5s linear infinite;
+}
+
+.logos img {
+  height: 80px;
+  margin: 0 15px;
+  vertical-align: middle;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ✅ Dark theme support */
+body.dark .stats-card {
+  background: #222;
+  color: #fff;
+}
+
+body.dark .stats-card p {
+  color: #ccc;
+}
+
+body.dark .reviews-box {
+  background: #000;
+  box-shadow: 0px 0px 5px 1px #444;
+}
+
+.features-section {
+  padding: 60px 20px;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.feature-card {
+  text-align: center;
+  max-width: 300px;
+  padding: 25px 20px;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: #f1f1f1;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.icon-box i {
+  font-size: 28px;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #222;
+}
+
+.feature-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ---------- Dark Theme ---------- */
+body.dark .feature-card {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .icon-box {
+  background: #2c2c2c;
+}
+
+body.dark .icon-box i {
+  color: #4da6ff; /* nice accent blue for icons */
+}
+
+body.dark .feature-card h3 {
+  color: #ffffff;
+}
+
+body.dark .feature-card p {
+  color: #cccccc;
+}
+
+/* Hover effect for dark theme */
+body.dark .feature-card:hover {
+  box-shadow: 0 6px 20px rgba(77, 166, 255, 0.4);
+}
+
+body.dark .icon-box:hover {
+  background: #4da6ff;
+  transform: scale(1.1);
+}
+
+body.dark .icon-box:hover i {
+  color: #fff;
+}
+
+
+.section6 {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+  border-radius: 30px;
+  padding: 40px;
+  position: relative;
+  gap: 30px;
+}
+
+.section6 .left {
+  width: 40%;
+  padding: 3%;
+}
+
+.section6 .left h5 {
+  letter-spacing: 2px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.section6 .left h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.section6 .left p {
+  color: grey;
+  line-height: 1.6;
+}
+
+/* Right section */
+.section6 .right {
+  width: 55%;
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section6 .right img:hover {
+  transform: perspective(1000px) rotateX(20deg) rotateY(15deg);
+  transition: transform 0.5s ease;
+}
+
+/* Creative word top */
+.section6 .right > img:first-child {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Sun + Work Smart */
+.section6 .right .sun {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Culture + Moon */
+.section6 .right .moon {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Button wrapper aligned bottom-right */
+.section6 .button_wrapper {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+.section6 .button_wrapper .btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.section6 .button_wrapper .btn:hover {
+  background-color: #222;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Dark mode */
+body.dark .section6 .button_wrapper .btn {
+  background-color: #f9f6f6;
+  color: #0e0d0d;
+}
+body.dark .section6 .button_wrapper .btn:hover {
+  box-shadow: 0 6px 12px rgba(255,255,255,0.2);
+}
+
+/* ---------- Light Theme ---------- */
+body.light .section6 {
+  background-color: white;
+  color: #222;
+}
+body.light .section6 .left p {
+  color: grey;
+}
+
+/* ---------- Dark Theme ---------- */
+body.dark .section6 {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+  box-shadow: 0px 0px 10px 1px rgba(255,255,255,0.1);
+}
+body.dark .section6 .left h5 {
+  color: #ccc;
+}
+body.dark .section6 .left p {
+  color: #aaa;
+}
+
+/* ----------- RESPONSIVE BREAKPOINTS ----------- */
+
+/* Large tablets & small laptops */
+@media (max-width: 1024px) {
+  .section6 {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+  .section6 .left, .section6 .right {
+    width: 100%;
+    padding: 0;
+  }
+  .section6 .left h1 {
+    font-size: 2.5em;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .section6 {
+    width: 90%;
+    padding: 25px;
+  }
+  .section6 .left h1 {
+    font-size: 2em;
+  }
+  .section6 .right {
+    min-height: 250px;
+  }
+  .section6 .button_wrapper {
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+/* Large mobiles */
+@media (max-width: 480px) {
+  .section6 {
+    flex-direction: column;
+    width: 95%;
+    padding: 20px;
+  }
+  .section6 .left h1 {
+    font-size: 1.8em;
+  }
+  .section6 .left h5 {
+    font-size: 14px;
+  }
+  .section6 .left p {
+    font-size: 14px;
+  }
+  .section6 .right {
+    position: relative;
+    min-height: 200px;
+  }
+  .section6 .right .sun,
+  .section6 .right .moon {
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  .section6 .right > img:first-child {
+    position: static;
+    transform: none;
+    margin-bottom: 15px;
+  }
+  .section6 .button_wrapper {
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
+/* Small mobiles (iPhone SE, older Android) */
+@media (max-width: 360px) {
+  .section6 {
+    padding: 15px;
+  }
+  .section6 .left h1 {
+    font-size: 1.5em;
+  }
+  .section6 .left p {
+    font-size: 13px;
+  }
+  .section6 .button_wrapper .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+
+/* 
+body.dark .section6 .right img {
+  filter: brightness(1.1);
+  transition: transform 0.5s ease, filter 0.5s ease; 
+}
+
+
+body.dark .section6 .right img:hover {
+  transform: perspective(1000px) rotateX(20deg) rotateY(15deg) scale(1.05);
+  filter: brightness(1.2); /* slight extra glow on hover
+} */
+
+
+
+
+
+
+
+
+
+
+
+ </style>
+</head>
+<body class="light">
+  <!-- Clouds -->
+  <div class="clouds">
+    <div class="cloud red" style="width:300px;height:300px;top:10%;left:5%;--start-x:-200px;--start-y:0;--end-x:120vw;--end-y:30vh;animation-duration:20s;"></div>
+    <div class="cloud blue" style="width:350px;height:350px;top:40%;left:-20%;--start-x:-250px;--start-y:50px;--end-x:120vw;--end-y:-20vh;animation-duration:25s;"></div>
+    <div class="cloud green" style="width:250px;height:250px;top:70%;left:10%;--start-x:0;--start-y:100px;--end-x:100vw;--end-y:-50vh;animation-duration:15s;"></div>
+    <div class="cloud purple" style="width:400px;height:400px;top:20%;left:70%;--start-x:0;--start-y:-200px;--end-x:-120vw;--end-y:40vh;animation-duration:22s;"></div>
+    <div class="cloud orange" style="width:280px;height:280px;top:60%;left:60%;--start-x:100px;--start-y:300px;--end-x:-100vw;--end-y:-30vh;animation-duration:18s;"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="logo-light.png" alt="Company Logo" class="nav-logo" id="navLogo"></a>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="about.html">About</a>
+      <a href="program.html">Programs</a>
+      <a href="career.html">Career</a>
+      <a href="refer.html">Referrals</a>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <!-- Sun/Moon icons instead of text -->
+      <button class="theme-toggle" id="themeBtn" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+
+ <div class="about">
+        <div class="section1">
+        <h4>About FlexCoders</h4>
+        <h1>Shapping Today Learners into, <br> Tomorrow's Techies</h1>
+    </div>
+
+
+<section class="about-section">
+  <div class="about-card">
+    
+    <!-- Top Row -->
+    <div class="about-top">
+      <!-- Left -->
+      <div class="about-left">
+        <h5 class="small-heading">LITTLE MORE</h5>
+        <h2 class="main-heading">Some Words<br>About FlexCoders</h2>
+      </div>
+
+      <!-- Right -->
+      <div class="about-right">
+        <p>
+         FlexCoders is an Edutech company dedicated to transforming aspiring learners into
+industry-ready IT professionals. We focus on providing practical, real-time training guided by
+experts from top MNCs, ensuring that our students gain hands-on experience in the latest
+technologies.
+        </p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr class="divider">
+
+    <!-- Bottom Row (Social Media) -->
+    <div class="about-bottom">
+      <div class="social-text">
+        <h3>Find us on <span>❤️</span><br>Social media</h3>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="#" class="btn"><i class="fas fa-envelope"></i> Mail</a>
+        <a href="#" class="btn"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#" class="btn"><i class="fab fa-facebook"></i> Facebook</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="stats-section">
+  <div class="stats-container">
+
+    <!-- Card 1 -->
+   <div class="stats-card">
+  <h4>NUMBERS</h4>
+  <p>Guiding learners towards their desired success</p>
+
+  <div class="count-wrapper">
+    <div class="bluebar leftToRight"></div>
+    <div class="count" id="count">0</div>
+    <div class="bluebar rightToLeft"></div>
+  </div>
+</div>
+
+
+    <!-- Card 2 -->
+    <div class="stats-card">
+      <h4>PARTNERS</h4>
+      <h2>Academic Partners</h2>
+      <p>Leveraging strong academic partnerships for student success.</p>
+
+      <div class="logo-container">
+        <div class="logos">
+          <img src="companies/accenture.png" alt="Partner Logo">
+          <img src="companies/wipro.png" alt="Partner Logo">
+          <img src="companies/hcl.png" alt="Partner Logo">
+          <img src="companies/ibm.png" alt="Partner Logo">
+          <img src="companies/infosys.png" alt="Partner Logo">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section class="features-section">
+  <div class="features-container">
+
+    <!-- Card 1 -->
+    <div class="feature-card">
+      <div class="icon-box">
+        <i class="fa-solid fa-video"></i>
+      </div>
+      <h3>Offline & Online Education </h3>
+      <p>
+       FlexCoders is one of the leading education institutes, providing hands-on, in-person
+learning experiences. Our expert mentors guide and teach students to achieve their highest
+potential. At Flexcoders, we strive to offer complete solutions to the challenges students
+face, ensuring holistic growth and career readiness.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="feature-card">
+      <div class="icon-box">
+        <i class="fa-regular fa-hand-pointer"></i>
+      </div>
+      <h3>Practical Skills</h3>
+      <p>
+        At Flexcoders, students gain hands-on, practical skills through live projects, coding
+exercises, and mentor-led workshops. Our industry-focused training ensures they can
+confidently apply their knowledge in real-world scenarios. Along with technical expertise, we
+emphasize problem-solving, teamwork, and professional readiness for a successful career.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="feature-card">
+      <div class="icon-box">
+        <i class="fa-regular fa-comments"></i>
+      </div>
+      <h3>Support Team</h3>
+      <p>
+At FlexCoders, our dedicated support team is always ready to guide students at every step of their learning journey. Whether it’s academic doubts, technical issues, or career guidance, we provide timely assistance to ensure uninterrupted learning. Our mentors and staff work together to create a supportive environment where students feel motivated, confident, and focused on achieving their goals      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+ <div class="section6">
+        <div class="left">
+            <h5>WORK WITH US</h5>
+            <h1>Led by <br>Visionary Minds</h1>
+            <p>Our commitment and love for service is known to all. Our Alumni and people working with us define us with the best compliments.</p>
+        </div>
+       <div class="right">
+    <img src="creative_text.png" alt="" height="80px" width="300px">
+
+    <div class="sun">
+        <img src="flower.svg" alt="" height="50px" width="50px">
+        <img src="work_smart_text.png" alt="" height="50px" width="200px">
+    </div>
+
+    <div class="moon">
+        <img src="culture_text.png" alt="" height="150px" width="200px">
+        <img src="red_moon.svg" alt="">
+    </div>
+
+    
+    <div class="button_wrapper">
+  <a href="career.html" class="btn">View all job offers</a>
+</div>
+</div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Above Footer Card -->
+  <div class="card">
+    <div class="above-footer">
+      <div class="af-content">
+        <img src="logo-light.png" alt="Company Logo" class="af-logo">
+        <h2>TECH STARTS HERE</h2>
+      </div>
+    </div>
+  </div>
+<!-- Main Footer Card -->
+<div class="card">
+  <div class="main-footer">
+    <div class="footer-columns">
+     <!-- Column 1: Address -->
+<div class="footer-column">
+  <h3>Address</h3>
+  <p><i class="fas fa-map-marker-alt"></i> 2nd floor, 100 Feet Rd, above Polaris Showroom, Ayyappa Society, Chanda Naik Nagar, Madhapur, Hyderabad, Telangana 500081</p>
+  <p><i class="fas fa-envelope"></i>support@flexcode.in</p>
+  <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+</div>
+
+
+      <!-- Column 2: Explore -->
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Partner</a></p>
+        <p><a href="#">Contact Us</a></p>
+        <p><a href="#">Community</a></p>
+        <p><a href="#">Reviews</a></p>
+        <p><a href="#">Demo Session</a></p>
+        <p><a href="#">Verify Certificate</a></p>
+      </div>
+
+      <!-- Column 3: Programs -->
+      <div class="footer-column">
+        <h3>Programs</h3>
+        <p><a href="#">Data Science With Gen AI</a></p>
+        <p><a href="#">Data Analytics</a></p>
+        <p><a href="#">Full Stack Development</a></p>
+        <p><a href="#">Mern Stack Development</a></p>
+        <p><a href="#">UI/UX Design</a></p>
+        <p><a href="#">SAP</a></p>
+        <p><a href="#">Digital Marketing</a></p>
+      </div>
+
+      <!-- Column 4: Company -->
+      <div class="footer-column">
+        <h3>Company</h3>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Blogs</a></p>
+        <p><a href="#">Career</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Below Footer Card -->
+<div class="card">
+  <div class="below-footer">
+    <div class="social-footer">
+      <div class="social-left">
+        <p>Find us on social media</p>
+      </div>
+      <div class="social-right">
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fas fa-envelope"></i>Mail</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Bottom 2 Card -->
+<div class="card">
+  <div class="footer-bottom2">
+    <p>© 2025 Flex Coders</p>
+    <span>|</span>
+    <a href="#">User Agreement</a>
+    <span>|</span>
+    <a href="#">Terms & Conditions</a>
+    <span>|</span>
+    <a href="#">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Full Width Logo at Bottom -->
+<div class="footer-logo">
+  <img src="bg1.png" alt="Company Logo" class="footer-img">
+</div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+  
+<script>
+  function countUp(target, duration) {
+    let element = document.getElementById("count");
+    let start = 0;
+    let end = target;
+    let increment = Math.ceil(end / (duration / 16));
+
+    let interval = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        element.textContent = end.toLocaleString() + "+";
+        clearInterval(interval);
+
+        setTimeout(() => {
+          countUp(target, duration);
+        }, 1000); 
+      } else {
+        element.textContent = start.toLocaleString();
+      }
+    }, 16);
+  }
+
+  window.onload = () => {
+    countUp(30000, 10000);
+  };
+</script>
+
+
+
+
+</body>
+</html>

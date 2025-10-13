@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexCoders </title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+  <!-- Clouds -->
+  <div class="clouds">
+    <div class="cloud red" style="width:300px;height:300px;top:10%;left:5%;--start-x:-200px;--start-y:0;--end-x:120vw;--end-y:30vh;animation-duration:20s;"></div>
+    <div class="cloud blue" style="width:350px;height:350px;top:40%;left:-20%;--start-x:-250px;--start-y:50px;--end-x:120vw;--end-y:-20vh;animation-duration:25s;"></div>
+    <div class="cloud green" style="width:250px;height:250px;top:70%;left:10%;--start-x:0;--start-y:100px;--end-x:100vw;--end-y:-50vh;animation-duration:15s;"></div>
+    <div class="cloud purple" style="width:400px;height:400px;top:20%;left:70%;--start-x:0;--start-y:-200px;--end-x:-120vw;--end-y:40vh;animation-duration:22s;"></div>
+    <div class="cloud orange" style="width:280px;height:280px;top:60%;left:60%;--start-x:100px;--start-y:300px;--end-x:-100vw;--end-y:-30vh;animation-duration:18s;"></div>
+  </div> 
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="logo-light.png" alt="Company Logo" class="nav-logo" id="navLogo"></a>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="about.html">About</a>
+      <a href="program.html">Programs</a>
+      <a href="career.html">Career</a>
+      <a href="refer.html">Referrals</a>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <!-- Sun/Moon icons instead of text -->
+      <button class="theme-toggle" id="themeBtn" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+<div class="container">
+    <div class="left">
+      <h1>Welcome to Flex Coders</h1> <br>
+      <div class="top-bar">Take The Next Step In Your Career</div>
+      <div class="main-title">
+        <span>Your Gateway to the IT Future</span>
+        <span></span>
+      </div>
+ <!-- ✅ Your existing enroll section -->
+<div class="cta-row">
+  <button class="enroll-btn">
+    Enroll Now
+    <span class="arrow">&#8594;</span>
+  </button>
+  <div class="enroll-info">
+    Enrolled by<span class="students"> 10k+ Students</span>
+  </div>
+</div>
+
+<!-- ✅ Popup Form -->
+<div class="popup-form" id="enrollForm">
+  <div class="form-content">
+    <span class="close-btn">&times;</span>
+    <h2 style="color:black;">Enroll Now</h2>
+    <form id="enrollSheetForm">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" placeholder="Message" rows="3"></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <!-- ✅ Thank You Message (hidden initially) -->
+    <div class="thank-you" id="thankYouMessage">
+      <i class="fa-solid fa-circle-check"></i>
+      <h3 style="color: black;">Thank You!</h3>
+      <p style="color: black;">Our team will contact you soon.</p>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <div class="right">
+      <img class="main-img" src="image1.png" alt="student network" />
+      <div class="google-cert">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" />
+        CERTIFICATIONS
+      </div>
+      <div class="students-card">
+        <img class="profile" src="https://randomuser.me/api/portraits/women/45.jpg" />
+        <img class="profile" src="https://randomuser.me/api/portraits/men/46.jpg" />
+        <img class="profile" src="https://randomuser.me/api/portraits/men/47.jpg" />
+        <span class="count">1000+ Students</span>
+      </div>
+      <div class="reviews-card">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" />
+        <span>990 Reviews</span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Advertisement Scrolling Bar -->
+<section  class="section fade-in" id="ads">
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <img src="companies\accenture.png" alt="Ad 1">
+      <img src="companies\coforge.png" alt="Ad 2">
+      <img src="companies\hcl.png" alt="Ad 3">
+      <img src="companies\ibm.png" alt="Ad 4">
+      <img src="companies\infosys.png" alt="Ad 5">
+      <img src="companies\lnt.png" alt="Ad 1">
+      <img src="companies\mphasis.png" alt="Ad 2">
+      <img src="companies\tcs.png" alt="Ad 3">
+      <img src="companies\tm.png" alt="Ad 4">
+      <img src="companies/wipro.png" alt="Ad 5">
+<!-- Duplicate Set for seamless loop -->
+      <img src="companies\accenture.png" alt="Ad 1">
+      <img src="companies\coforge.png" alt="Ad 2">
+      <img src="companies\HCL.png" alt="Ad 3">
+      <img src="companies\ibm.png" alt="Ad 4">
+      <img src="companies\infosys.png" alt="Ad 5">
+      <img src="companies\lnt.png" alt="Ad 1">
+      <img src="companies\mphasis.png" alt="Ad 2">
+      <img src="companies\tcs.png" alt="Ad 3">
+      <img src="companies\tm.png" alt="Ad 4">
+      <img src="companies/wipro.png" alt="Ad 5">
+
+    </div>
+  </div>
+</section>
+
+
+
+
+   <div class="course">
+        <h3>COURSE</h3>
+        <h1>Our Online & Offline<br> Training Programs</h1>
+        <p>All courses has certified Certificate partners..</p>
+        <button id="trendingBtn"><i class="fa-solid fa-fire-flame-curved"></i> Trending</button>
+        <button id="allBtn" class="active">All</button>
+        <p class="coursecount" id="courseCount"> </p>
+
+        <div class="course_cards">
+            <div class="course_card" data-name="Data Science">
+                <div class="top" style="background-color: #A25BFF;">
+                    <h2>Data Science <br> With Gen AI</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>2 Months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                   
+                    <button><a href="ds_gen_AI.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="Data Analytics">
+                <div class="top" style="background-color: #1db3d5;">
+                    <h2>Data <br> Analytics</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>2 Months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="data_analytics.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="Full Stack Development">
+                <div class="top" style="background-color: #FFAB00;">
+                    <h2>Full Stack <br>Development </h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>2 Months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="fsd.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="Mern Stack Development">
+                <div class="top" style="background-color: #1DD561;">
+                    <h2>Mern Stack <br> Development</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>2 Months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="MERN.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+            <div class="course_card" data-name="UI/UX Design">
+                <div class="top" style="background-color: #FF6969;">
+                    <h2>UI/UX <br> Design</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>2 Months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="uiux.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="SAP">
+                <div class="top" style="background-color: #FFAB00;">
+                    <h2>SAP</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>2 Months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="sap.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="Digital Marketing">
+                <div class="top" style="background-color: #A25BFF;">
+                    <h2>Digital <br> Marketing</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>2 Months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="dm.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+
+<div class="experts-extra-cards">
+  <!-- Liked Card -->
+  <div class="info-card liked-card">
+    <p class="card-label">LIKED</p>
+    <h2>4.5+ Rating for our courses</h2>
+    <div class="rating">⭐ <br> 4.5+</div>
+    <!-- <span class="reviews">4.5+ Google Reviews</span> -->
+  </div>
+
+  <!-- Offers Card -->
+  <div class="info-card offers-card">
+    <p class="card-label">OFFERS</p>
+    <h2>Awesome discounts on all courses</h2>
+    <p class="offer-desc">15% OFF on every course, Get started on owning a new skill.</p>
+    <div class="tags">
+      <span class="tag purple">ALL  COURSE</span>
+      <span class="discount">15% OFF</span>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- feedback section -->
+<div class="feedback-section">
+        <div class="section-header">
+            <div class="feedback-label">FEEDBACK</div>
+            <h1 class="main-title">Trusted by 50K+<br>Users</h1>
+            <p class="subtitle">Trusted by our community of over 50K+ users.</p>
+            
+            <div class="google-badge">
+                <div class="badge-content">
+                    <div class="badge-rating">REVIEWED 4.4+</div>
+                    <div class="badge-stars">★★★★★</div>
+                </div>
+                <div class="google-logo">
+                    <span class="google-g">G</span><span class="google-o1">o</span><span class="google-o2">o</span><span class="google-g2">g</span><span class="google-l">l</span><span class="google-e">e</span>
+                </div>
+                <div class="badge-reviews">990 Reviews</div>
+            </div>
+        </div>
+
+        <div class="testimonials-container">
+            <div class="testimonials-track">
+                <!-- First set of testimonials -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        I completed the "Introduction to Data Science" course, which exceeded my expectations. The course offers expert instructors,making it an enriching learning experience.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-1">AK</div>
+                        <div class="author-info">
+                            <div class="author-name">Anirudh Kumar</div>
+                            <div class="author-college">BIT University</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The course curriculum is on par with leading industry standards, providing a wide range of courses to various interests and skill levels. It's definitely worth giving it to advance their knowledge.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-2">SR</div>
+                        <div class="author-info">
+                            <div class="author-name">Sanskrit Roy</div>
+                            <div class="author-college">Shaheed Rajguru College of Applied Sciences</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Flex Coders Technologies Private Limited excels in innovative software solutions and IT services, delivering high-quality, client-focused products. Their expert team ensures customer satisfaction.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-3">VS</div>
+                        <div class="author-info">
+                            <div class="author-name">Vignesh S</div>
+                            <!-- <div class="author-college">Sri Shakti College</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Flex Coders, it's very easy to learn and topics& all courses is available what people is trying to learn and budget friendly to learn the courses. Thank u Flex Coders
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-4">AG</div>
+                        <div class="author-info">
+                            <div class="author-name">Avala Gurumurthy</div>
+                            <!-- <div class="author-college">Vijayam Science and Arts Degree College</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        It is a quality course. Good type of course to improve knowledge. Excellent. Thank you! The instructors are very knowledgeable and supportive.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-5">P</div>
+                        <div class="author-info">
+                            <div class="author-name">Prathiyumnan</div>
+                            <!-- <div class="author-college">Anna University</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Amazing learning experience! The practical approach and real-world projects helped me understand complex concepts easily. Highly recommended for anyone serious about tech skills.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-6">RS</div>
+                        <div class="author-info">
+                            <div class="author-name">Rahul Sharma</div>
+                            <div class="author-college">IIT Delhi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The AI/ML course content is outstanding. Clear explanations, practical examples, and excellent support from instructors. This platform has transformed my career prospects significantly.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-7">MP</div>
+                        <div class="author-info">
+                            <div class="author-name">Meera Patel</div>
+                            <div class="author-college">NIT Surat</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Flexible learning schedule and comprehensive course materials make it perfect for working professionals. The community support is also excellent.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-8">DK</div>
+                        <div class="author-info">
+                            <div class="author-name">Deepak Kumar</div>
+                            <div class="author-college">Manipal University</div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+I have joined as trainee in data science with gen ai it's absolutely friendly training and hands of experience is nice with good faculty and proffesors
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-1">RK</div>
+                        <div class="author-info">
+                            <div class="author-name">Rama krishna chintha</div>
+                            <!-- <div class="author-college">BIT University</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The course curriculum is on par with leading industry standards, providing a wide range of courses that cater to various skill levels. It's definitely looking to advance their knowledge.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-2">SR</div>
+                        <div class="author-info">
+                            <div class="author-name">Sanskrit Roy</div>
+                            <!-- <div class="author-college">Shaheed Rajguru College of Applied Sciences</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+Took online training few days back. Way of teaching is good. Having separate lms portal and app also. Facility to see recorded videos. Good support from mentors                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-3">CS</div>
+                        <div class="author-info">
+                            <div class="author-name">Charmi shreya</div>
+                            <!-- <div class="author-college">Sri Shakti College</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+I am currently taking SQL training in this institute, and the teaching quality, guidance, and support were excellent.                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-4">RP</div>
+                        <div class="author-info">
+                            <div class="author-name">Rakesh pasupula</div>
+                            <!-- <div class="author-college">Vijayam Science and Arts Degree College</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+Recently I took data analytics only recorded videos section.
+Trainer is teaching good.                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-5">P</div>
+                        <div class="author-info">
+                            <div class="author-name">Nadendla vishnu vardhan</div>
+                            <!-- <div class="author-college">Anna University</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Amazing learning experience! The practical approach and real-world projects helped me understand complex concepts easily. Highly recommended for anyone serious about tech skills.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-6">RS</div>
+                        <div class="author-info">
+                            <div class="author-name">Rahul Sharma</div>
+                            <div class="author-college">IIT Delhi</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The AI/ML course content is outstanding. Clear explanations, practical examples, and excellent support from instructors. This platform has transformed my career prospects significantly.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-7">MP</div>
+                        <div class="author-info">
+                            <div class="author-name">Meera Patel</div>
+                            <div class="author-college">NIT Surat</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Flexible learning schedule and comprehensive course materials make it perfect for working professionals. The community support is also excellent.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar avatar-8">DK</div>
+                        <div class="author-info">
+                            <div class="author-name">Deepak Kumar</div>
+                            <div class="author-college">Manipal University</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Support Banner -->
+<div class="support-card">
+  <div class="support-text">
+    <p class="support-card-para">SUPPORT</p>
+    <h5 class="support-card-heading">Flex Coders<br>Academic<br>Support</h5>
+    <p class="support-card-para-grey">
+      Get better help from our best support team of Flex Coders
+    </p>
+  </div>
+
+  <div class="support-images">
+    <!-- Background circles -->
+    <div class="circle green"></div>
+    <div class="circle blue"></div>
+    <div class="circle yellow"></div>
+
+    <!-- Speech bubble -->
+    <!-- <div class="speech-bubble"></div> -->
+
+    <!-- Person -->
+    <img class="man" src="image1.png" alt="Man Support">
+  </div>
+</div>
+
+
+
+<div class="section_cards_container">
+    <!-- Card 1 -->
+    <div class="card">
+      <h5>DEMO</h5>
+      <h2>Request a <br> free demo</h2>
+
+      <div class="requestBtn">
+        <button><i class="fa-solid fa-bolt"></i> Request</button>
+      </div>
+
+      <a href="#" style="text-decoration: none; color: black;"><button id="b1">Request <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h5>CALL US</h5>
+      <h2>Have<br>doubt? Call <br>Us</h2>
+
+      <div class="waveform">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+
+      <a href="tel:+91 9429690310"><button id="b2">+91 9429690310 <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <h5>QUERY</h5>
+      <h2>Have <br>query? Mail <br>Us</h2>
+
+      <div class="dialogueBox_container">
+        <div class="dialogue_box">Is it Online?</div>
+        <div class="dialogue_box2">Yes! and Live class</div>
+      </div>
+
+      <a href="mailto:help@FlexCoders.in"><button id="b3">help@FlexCoders.in <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+</a>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Above Footer Card -->
+  <div class="card">
+    <div class="above-footer">
+      <div class="af-content">
+        <img src="logo-light.png" alt="Company Logo" class="af-logo">
+        <h2>TECH STARTS HERE</h2>
+      </div>
+    </div>
+  </div>
+<!-- Main Footer Card -->
+<div class="card">
+  <div class="main-footer">
+    <div class="footer-columns">
+     <!-- Column 1: Address -->
+<div class="footer-column">
+  <h3>Address</h3>
+  <p><i class="fas fa-map-marker-alt"></i> 2nd floor, 100 Feet Rd, above Polaris Showroom, Ayyappa Society, Chanda Naik Nagar, Madhapur, Hyderabad, Telangana 500081</p>
+  <p><i class="fas fa-envelope"></i>support@flexcode.in</p>
+  <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+</div>
+
+
+      <!-- Column 2: Explore -->
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Partner</a></p>
+        <p><a href="#">Contact Us</a></p>
+        <p><a href="#">Community</a></p>
+        <p><a href="#">Reviews</a></p>
+        <p><a href="#">Demo Session</a></p>
+        <p><a href="#">Verify Certificate</a></p>
+      </div>
+
+      <!-- Column 3: Programs -->
+      <div class="footer-column">
+        <h3>Programs</h3>
+        <p><a href="#">Data Science With Gen AI</a></p>
+        <p><a href="#">Data Analytics</a></p>
+        <p><a href="#">Full Stack Development</a></p>
+        <p><a href="#">Mern Stack Development</a></p>
+        <p><a href="#">UI/UX Design</a></p>
+        <p><a href="#">SAP</a></p>
+        <p><a href="#">Digital Marketing</a></p>
+      </div>
+
+      <!-- Column 4: Company -->
+      <div class="footer-column">
+        <h3>Company</h3>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Blogs</a></p>
+        <p><a href="#">Career</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Below Footer Card -->
+<div class="card">
+  <div class="below-footer">
+    <div class="social-footer">
+      <div class="social-left">
+        <p>Find us on social media</p>
+      </div>
+      <div class="social-right">
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fas fa-envelope"></i>Mail</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Bottom 2 Card -->
+<div class="card">
+  <div class="footer-bottom2">
+    <a href="#">© 2025 Flex Coders</a>
+    <span>|</span>
+    <a href="#">User Agreement</a>
+    <span>|</span>
+    <a href="#">Terms & Conditions</a>
+    <span>|</span>
+    <a href="#">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Full Width Logo at Bottom -->
+<div class="footer-logo">
+  <img src="bg1.png" alt="Company Logo" class="footer-img">
+</div>
+
+
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+
+ 
+
+
+
+<script>
+  const enrollBtn = document.querySelector('.enroll-btn');
+  const popup = document.getElementById('enrollForm');
+  const closeBtn = document.querySelector('.close-btn');
+  const form = document.getElementById('enrollSheetForm');
+  const thankYou = document.getElementById('thankYouMessage');
+
+  // ✅ Show popup
+  enrollBtn.addEventListener('click', () => {
+    popup.style.display = 'flex';
+    form.style.display = 'block';
+    thankYou.style.display = 'none';
+  });
+
+  // ✅ Close popup manually
+  closeBtn.addEventListener('click', () => popup.style.display = 'none');
+  window.addEventListener('click', (e) => {
+    if (e.target === popup) popup.style.display = 'none';
+  });
+
+  // ✅ Google Sheets Integration
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyyrIleXmKvnj0vDvthAdpx-7ell0TNr0ATk4blV11y0Z1oPNFp2ojaLtD2gZkcMNvrXA/exec'; // Replace with your script URL
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Disable submit button temporarily
+    const submitBtn = form.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'Submitting...';
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        // ✅ Show Thank You message
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+
+        // ✅ Reset form and button text
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Submit';
+
+        // ✅ Auto-close popup after 2.5 sec
+        setTimeout(() => popup.style.display = 'none', 2500);
+      })
+      .catch(error => {
+        // ✅ Still show thank you even if Google script isn’t connected yet
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+        setTimeout(() => popup.style.display = 'none', 2500);
+        console.error('Error!', error.message);
+      });
+  });
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

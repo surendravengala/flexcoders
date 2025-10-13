@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexCoders </title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="style.css">
+ <style>
+        .program_course{
+             width: 90%;
+             margin: auto;
+        }
+        .course_cards {
+           
+            display: flex;
+            align-items: center;
+justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        
+        .course_card {
+            height: 500px;
+            width: 350px;
+            background-color: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 15px 2px black;
+        }
+
+        .course_card .top {
+            position: relative;
+            height: 35%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border-radius: 20px 20px 0 0; 
+        }
+
+        .course_card .top::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: inherit; 
+            z-index: 0;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .course_card .top > * {
+            position: relative;
+            z-index: 1;
+            padding: 15px;
+            color: #fff;
+        }
+
+        .course_card .top h3 {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .course_card .top h2 {
+            font-size: 2.3em;
+            letter-spacing: 1px;
+        }
+
+        .course_card .bottom {
+            flex: 1;
+            background: #f8f8f8;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course_card .bottom h5 {
+            color: grey;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+
+        .course_card .bottom h4 {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .course_card .bottom button {
+          margin: auto;
+            background: transparent;
+            border: none;
+            color: grey;
+            cursor: pointer;
+        }
+        .course_card .bottom button a{
+          text-decoration: none;
+          color: black;
+        }
+        
+         
+        #courseCount{
+            letter-spacing: 2px;
+            margin: 20px 10px;
+        }
+
+
+
+
+    </style>
+</head>
+<body class="light">
+  <!-- Clouds -->
+  <div class="clouds">
+    <div class="cloud red" style="width:300px;height:300px;top:10%;left:5%;--start-x:-200px;--start-y:0;--end-x:120vw;--end-y:30vh;animation-duration:20s;"></div>
+    <div class="cloud blue" style="width:350px;height:350px;top:40%;left:-20%;--start-x:-250px;--start-y:50px;--end-x:120vw;--end-y:-20vh;animation-duration:25s;"></div>
+    <div class="cloud green" style="width:250px;height:250px;top:70%;left:10%;--start-x:0;--start-y:100px;--end-x:100vw;--end-y:-50vh;animation-duration:15s;"></div>
+    <div class="cloud purple" style="width:400px;height:400px;top:20%;left:70%;--start-x:0;--start-y:-200px;--end-x:-120vw;--end-y:40vh;animation-duration:22s;"></div>
+    <div class="cloud orange" style="width:280px;height:280px;top:60%;left:60%;--start-x:100px;--start-y:300px;--end-x:-100vw;--end-y:-30vh;animation-duration:18s;"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="logo-light.png" alt="Company Logo" class="nav-logo" id="navLogo"></a>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="about.html">About</a>
+      <a href="program.html">Programs</a>
+      <a href="career.html">Career</a>
+      <a href="refer.html">Referrals</a>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <!-- Sun/Moon icons instead of text -->
+      <button class="theme-toggle" id="themeBtn" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+<div class="program_course">  
+        <div class="course_cards">
+            <div class="course_card" data-name="Data Science">
+                <div class="top" style="background-color: #A25BFF;">
+                    <h2>Data Science <br> With Gen AI</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>6 months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                   
+                    <button><a href="ds_gen_AI.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="Data Analytics">
+                <div class="top" style="background-color: #1db3d5;">
+                    <h2>Data <br> Analytics</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>6 months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="data_analytics.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="Full Stack Development">
+                <div class="top" style="background-color: #FFAB00;">
+                    <h2>Full Stack <br>Development </h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>6 months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="FSD.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="Mern Stack Development">
+                <div class="top" style="background-color: #1DD561;">
+                    <h2>Mern Stack <br> Development</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>6 months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="MERN.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+            <div class="course_card" data-name="UI/UX Design">
+                <div class="top" style="background-color: #FF6969;">
+                    <h2>UI/UX <br> Design</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>6 months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="uiux.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="SAP">
+                <div class="top" style="background-color: #FFAB00;">
+                    <h2>SAP</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>6 months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="sap.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+
+            <div class="course_card" data-name="Digital Marketing">
+                <div class="top" style="background-color: #A25BFF;">
+                    <h2>Digital <br> Marketing</h2>
+                </div>
+                <div class="bottom">
+                    <h5>DURATION</h5>
+                    <h4>6 months. Project included</h4>
+                    <h5>PROGRAM</h5>
+                    <h4>Live and interactive <i class="fa-solid fa-circle-info"></i></h4>
+                    <p></p>
+                    <button><a href="dm.html">View Program <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+                </div>
+            </div>
+            </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Above Footer Card -->
+  <div class="card">
+    <div class="above-footer">
+      <div class="af-content">
+        <img src="logo-light.png" alt="Company Logo" class="af-logo">
+        <h2>TECH STARTS HERE</h2>
+      </div>
+    </div>
+  </div>
+<!-- Main Footer Card -->
+<div class="card">
+  <div class="main-footer">
+    <div class="footer-columns">
+     <!-- Column 1: Address -->
+<div class="footer-column">
+  <h3>Address</h3>
+  <p><i class="fas fa-map-marker-alt"></i> 2nd floor, 100 Feet Rd, above Polaris Showroom, Ayyappa Society, Chanda Naik Nagar, Madhapur, Hyderabad, Telangana 500081</p>
+  <p><i class="fas fa-envelope"></i>support@flexcode.in</p>
+  <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+</div>
+
+
+      <!-- Column 2: Explore -->
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Partner</a></p>
+        <p><a href="#">Contact Us</a></p>
+        <p><a href="#">Community</a></p>
+        <p><a href="#">Reviews</a></p>
+        <p><a href="#">Demo Session</a></p>
+        <p><a href="#">Verify Certificate</a></p>
+      </div>
+
+      <!-- Column 3: Programs -->
+      <div class="footer-column">
+        <h3>Programs</h3>
+        <p><a href="#">Data Science With Gen AI</a></p>
+        <p><a href="#">Data Analytics</a></p>
+        <p><a href="#">Full Stack Development</a></p>
+        <p><a href="#">Mern Stack Development</a></p>
+        <p><a href="#">UI/UX Design</a></p>
+        <p><a href="#">SAP</a></p>
+        <p><a href="#">Digital Marketing</a></p>
+      </div>
+
+      <!-- Column 4: Company -->
+      <div class="footer-column">
+        <h3>Company</h3>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Blogs</a></p>
+        <p><a href="#">Career</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Below Footer Card -->
+<div class="card">
+  <div class="below-footer">
+    <div class="social-footer">
+      <div class="social-left">
+        <p>Find us on social media</p>
+      </div>
+      <div class="social-right">
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fas fa-envelope"></i>Mail</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Bottom 2 Card -->
+<div class="card">
+  <div class="footer-bottom2">
+    <a href="#">© 2025 Flex Coders</a>
+    <span>|</span>
+    <a href="#">User Agreement</a>
+    <span>|</span>
+    <a href="#">Terms & Conditions</a>
+    <span>|</span>
+    <a href="#">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Full Width Logo at Bottom -->
+<div class="footer-logo">
+  <img src="bg1.png" alt="Company Logo" class="footer-img">
+</div>
+
+
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>

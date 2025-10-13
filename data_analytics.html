@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexCoders </title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="style.css">
+ <style>
+    .program_container {
+            max-width: 1300px;
+            margin: 30px 30px;
+        }
+
+        /* Hero Section Styles */
+        .program_container .hero-card {
+            background: linear-gradient(135deg, #2962ff 0%, #1565c0 100%);
+            border-radius: 24px;
+            padding: 60px 50px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(41, 98, 255, 0.3);
+            margin-bottom: 30px;
+        }
+
+         .program_container .hero-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .program_container .category {
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .program_container .main-title {
+            color: white;
+            font-size: 62px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .program_container .subtitle {
+            color: white;
+            font-size: 62px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .program_container .trained-by {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 18px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .program_container .company-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .program_container .company-logo svg {
+            width: 180px;
+            height: 40px;
+            fill: white;
+        }
+
+        .program_container .certificate-badge {
+            position: absolute;
+            top: 40px;
+            right: 50px;
+            background: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .program_container .certificate-badge img {
+            display: inline-block;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .program_container .stipend-badge {
+            position: absolute;
+            bottom: 40px;
+            right: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .program_container .program-info {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            margin-bottom: 60px;
+        }
+
+        .program_container .info-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .program_container .info-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .program_container .icon-blue {
+            background: #e3f2fd;
+            color: #2962ff;
+        }
+
+        .program_container .icon-green {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .program_container .icon-yellow {
+            background: #fff8e1;
+            color: #f9a825;
+        }
+
+        .program_container .info-content h3 {
+            font-size: 12px;
+            color: #999;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .program_container .info-content p {
+            font-size: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+
+       .program_container .divider {
+            width: 1px;
+            height: 60px;
+            background: #e0e0e0;
+        }
+
+        .program_container .register-btn {
+            background: #2962ff;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(41, 98, 255, 0.3);
+        }
+
+        .program_container .register-btn:hover {
+            background: #1565c0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(41, 98, 255, 0.4);
+        }
+
+        .program_container .register-btn::after {
+            content: '❯❯❯';
+            font-size: 14px;
+        }
+
+        /* Course Details Section Styles */
+        .program_container .course-details-section {
+            margin-top: 60px;
+            margin-bottom: 80px;
+        }
+
+        .program_container .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #000;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+body.dark .program_container .section-label{
+    color: white;
+}
+        .program_container .section-title {
+            font-size: 52px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.2;
+            margin-bottom: 50px;
+        }
+body.dark .program_container .section-title{
+    color: white;
+}
+        .program_container .details-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .program_container .detail-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 220px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .program_container .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .program_container .detail-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .program_container .detail-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #666;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .program_container .detail-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.3;
+        }
+
+        .program_container .detail-icon {
+            position: absolute;
+            right: 35px;
+            bottom: 35px;
+            font-size: 70px;
+            opacity: 0.9;
+        }
+
+        /* Highlights Section Styles */
+        .program_container .highlights-section {
+            margin-top: 60px;
+        }
+
+        .highlights-title {
+            font-size: 48px;
+            margin-bottom: 50px;
+            color: black;
+            font-weight: bold;      }
+ body.dark .highlights-title{
+    color: white;
+}
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .highlight-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.15;
+            border-radius: 20px;
+            z-index: 0;
+        }
+
+        .highlight-card:nth-child(1)::before { background: linear-gradient(135deg, #fff9e6 0%, #ffeb99 100%); }
+        .highlight-card:nth-child(2)::before { background: linear-gradient(135deg, #e6fff2 0%, #99ffcc 100%); }
+        .highlight-card:nth-child(3)::before { background: linear-gradient(135deg, #e6f2ff 0%, #99ccff 100%); }
+        .highlight-card:nth-child(4)::before { background: linear-gradient(135deg, #f2e6ff 0%, #d4b3ff 100%); }
+        .highlight-card:nth-child(5)::before { background: linear-gradient(135deg, #ffe6e6 0%, #ffb3b3 100%); }
+        .highlight-card:nth-child(6)::before { background: linear-gradient(135deg, #e6ffe6 0%, #b3ffb3 100%); }
+        .highlight-card:nth-child(7)::before { background: linear-gradient(135deg, #fffae6 0%, #fff2b3 100%); }
+        .highlight-card:nth-child(8)::before { background: linear-gradient(135deg, #fff5e6 0%, #ffd9b3 100%); }
+        .highlight-card:nth-child(9)::before { background: linear-gradient(135deg, #efffef 0%, #ccffcc 100%); }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .program_container .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .program_container .card-label {
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            color: #000;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .program_container .card-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #000;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .program_container .card-icon {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            font-size: 60px;
+            z-index: 1;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .main-title, .subtitle {
+                font-size: 48px;
+            }
+
+            .program-info {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            .divider {
+                display: none;
+            }
+
+            .details-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-card {
+                padding: 40px 30px;
+            }
+
+            .main-title, .subtitle {
+                font-size: 36px;
+            }
+
+            .certificate-badge, .stipend-badge {
+                position: static;
+                margin-top: 20px;
+                display: inline-block;
+            }
+
+            .program-info {
+                padding: 30px 25px;
+            }
+
+            .section-title {
+                font-size: 40px;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .highlights-title {
+                font-size: 36px;
+            }
+        }
+
+        /* @media (max-width: 480px) {
+  .program_container .details-grid {
+    grid-template-columns: 1fr !important; 
+    gap: 20px; 
+  }
+} */
+
+ </style>
+</head>
+<body class="light">
+  <!-- Clouds -->
+  <div class="clouds">
+    <div class="cloud red" style="width:300px;height:300px;top:10%;left:5%;--start-x:-200px;--start-y:0;--end-x:120vw;--end-y:30vh;animation-duration:20s;"></div>
+    <div class="cloud blue" style="width:350px;height:350px;top:40%;left:-20%;--start-x:-250px;--start-y:50px;--end-x:120vw;--end-y:-20vh;animation-duration:25s;"></div>
+    <div class="cloud green" style="width:250px;height:250px;top:70%;left:10%;--start-x:0;--start-y:100px;--end-x:100vw;--end-y:-50vh;animation-duration:15s;"></div>
+    <div class="cloud purple" style="width:400px;height:400px;top:20%;left:70%;--start-x:0;--start-y:-200px;--end-x:-120vw;--end-y:40vh;animation-duration:22s;"></div>
+    <div class="cloud orange" style="width:280px;height:280px;top:60%;left:60%;--start-x:100px;--start-y:300px;--end-x:-100vw;--end-y:-30vh;animation-duration:18s;"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="logo-light.png" alt="Company Logo" class="nav-logo" id="navLogo"></a>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="about.html">About</a>
+      <a href="program.html">Programs</a>
+      <a href="career.html">Career</a>
+      <a href="refer.html">Referrals</a>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <!-- Sun/Moon icons instead of text -->
+      <button class="theme-toggle" id="themeBtn" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+<div class="program_container">
+        <!-- Hero Section -->
+        <div class="hero-card">
+            <div class="category">COMPUTER SCIENCE</div>
+            
+            <h1 class="main-title">Data Analytics Course</h1>
+            <h2 class="subtitle">assured internship program</h2>
+            
+            <p class="trained-by">Trained by Industry experts</p>
+            
+            <div class="company-logo">
+                <img src="companies/ibm.png" alt="IBM Logo" height="50px" width="150px">
+            </div>
+
+            <div class="certificate-badge">
+                <span style="color: #2962ff;"><img src="companies/ibm.png" alt="IBM" height="50px" width="100px"></span> CERTIFICATE PARTNER
+            </div>
+
+            <div class="stipend-badge">
+                ₹20,000- HIGH STIPEND OFFERED ★
+            </div>
+        </div>
+
+        <!-- Program Info Section -->
+        <div class="program-info">
+            <div class="info-item">
+                <div class="info-icon icon-blue">⏱</div>
+                <div class="info-content">
+                    <h3>DURATION</h3>
+                    <p>20 - 25 weeks</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info-item">
+                <div class="info-icon icon-green">🎓</div>
+                <div class="info-content">
+                    <h3>PROGRAM</h3>
+                    <p>Offline & Online</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="info-item">
+                <div class="info-icon icon-yellow">⚡</div>
+                <div class="info-content">
+                    <h3>GUARNTEED</h3>
+                    <p>Skills</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <button class="register-btn">
+                Register ₹ 50,000  35000
+            </button>
+        </div>
+
+
+
+        <!-- Highlights Section -->
+        <div class="highlights-section">
+            <h6 style="letter-spacing: 2px; margin-bottom: 20px;">ABOUT PROGRAM</h6>
+            <h1 class="highlights-title"> Program <br>Highlights</h1>
+            
+            <div class="highlights-grid">
+                <!-- Card 1 -->
+                <div class="highlight-card">
+                    <div class="card-content">
+                        <div class="card-label">LEARN OFFLINE & ONLINE</div>
+                        <div class="card-title">Based on <br>Scheduled time</div>
+                    </div>
+                    <!-- <div class="card-icon">📅</div> -->
+                </div>
+
+                
+                <!-- <div class="highlight-card">
+                    <div class="card-content">
+                        <div class="card-label">MOBILE FREINDLY</div>
+                        <div class="card-title">No laptop?<br>No problem</div>
+                    </div>
+                    <div class="card-icon">📱</div>
+                </div> -->
+
+                <!-- Card 3 -->
+                <div class="highlight-card">
+                    <div class="card-content">
+                        <div class="card-label">PLACEMENT ASSISTANCE</div>
+                        <div class="card-title">To build your<br>Career Path</div>
+                    </div>
+                    <!-- <div class="card-icon">💼</div> -->
+                </div>
+
+                <!-- Card 4 -->
+                <div class="highlight-card">
+                    <div class="card-content">
+                        <div class="card-label">CERTIFICATE OF TRAINING</div>
+                        <div class="card-title">From FlexCoders</div>
+                    </div>
+                    <!-- <div class="card-icon">🏆</div> -->
+                </div>
+
+                <!-- Card 5 -->
+                <div class="highlight-card">
+                    <div class="card-content">
+                        <div class="card-label">2 Real Time & 4 Capstone Projects</div>
+                        <div class="card-title">For hands<br>on Practice</div>
+                    </div>
+                    <!-- <div class="card-icon">🔨</div> -->
+                </div>
+
+                <!-- Card 6 -->
+                <div class="highlight-card">
+                    <div class="card-content">
+                        <div class="card-label">20+ DOUBT CLEARING SESSIONS</div>
+                        <div class="card-title">Through Live Interactions</div>
+                    </div>
+                    <!-- <div class="card-icon">❓</div> -->
+                </div>
+
+                <!-- Card 7 -->
+                <div class="highlight-card">
+                    <div class="card-content">
+                        <div class="card-label">LEARN IN ENGLISH OR TELUGU</div>
+                        <div class="card-title">As per your<br>choice</div>
+                    </div>
+                    <!-- <div class="card-icon">✅</div> -->
+                </div>
+
+                <!-- Card 8 -->
+                <div class="highlight-card">
+                    <div class="card-content">
+                        <div class="card-label">BEGINNER FRIENDLY</div>
+                        <div class="card-title">NO prior<br>knowledge required</div>
+                    </div>
+                    <!-- <div class="card-icon">⭐</div> -->
+                </div>
+
+                <!-- Card 9 -->
+                <div class="highlight-card">
+                    <div class="card-content">
+                        <div class="card-label">20-25 WEEKS DURATION</div>
+                        <div class="card-title">2Hr/day</div>
+                    </div>
+                    <!-- <div class="card-icon">📆</div> -->
+                </div>
+            </div>
+        </div>
+                <!-- Course Details Section -->
+        <div class="course-details-section">
+            <div class="section-label">PROGRAM</div>
+            <h1 class="section-title">Data Analytics<br>Course Details</h1>
+            
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-content">
+                        <div class="detail-label">CONTENT</div>
+                        <div class="detail-title">250+ Hours of<br>Contents</div>
+                    </div>
+                    <div class="detail-icon">📄</div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-content">
+                        <div class="detail-label">KNOWLEDGE</div>
+                        <div class="detail-title">Practical<br>Assessments</div>
+                    </div>
+                    <div class="detail-icon">📝</div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-content">
+                        <div class="detail-label">PROJECTS</div>
+                        <div class="detail-title">2 Industrial & 4 Capstone <br> Projects</div>
+                    </div>
+                    <div class="detail-icon">⭐</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Above Footer Card -->
+  <div class="card">
+    <div class="above-footer">
+      <div class="af-content">
+        <img src="logo-light.png" alt="Company Logo" class="af-logo">
+        <h2>TECH STARTS HERE</h2>
+      </div>
+    </div>
+  </div>
+<!-- Main Footer Card -->
+<div class="card">
+  <div class="main-footer">
+    <div class="footer-columns">
+     <!-- Column 1: Address -->
+<div class="footer-column">
+  <h3>Address</h3>
+  <p><i class="fas fa-map-marker-alt"></i> 2nd floor, 100 Feet Rd, above Polaris Showroom, Ayyappa Society, Chanda Naik Nagar, Madhapur, Hyderabad, Telangana 500081</p>
+  <p><i class="fas fa-envelope"></i>support@flexcode.in</p>
+  <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+</div>
+
+
+      <!-- Column 2: Explore -->
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Partner</a></p>
+        <p><a href="#">Contact Us</a></p>
+        <p><a href="#">Community</a></p>
+        <p><a href="#">Reviews</a></p>
+        <p><a href="#">Demo Session</a></p>
+        <p><a href="#">Verify Certificate</a></p>
+      </div>
+
+      <!-- Column 3: Programs -->
+      <div class="footer-column">
+        <h3>Programs</h3>
+        <p><a href="#">Data Science With Gen AI</a></p>
+        <p><a href="#">Data Analytics</a></p>
+        <p><a href="#">Full Stack Development</a></p>
+        <p><a href="#">Mern Stack Development</a></p>
+        <p><a href="#">UI/UX Design</a></p>
+        <p><a href="#">SAP</a></p>
+        <p><a href="#">Digital Marketing</a></p>
+      </div>
+
+      <!-- Column 4: Company -->
+      <div class="footer-column">
+        <h3>Company</h3>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Blogs</a></p>
+        <p><a href="#">Career</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Below Footer Card -->
+<div class="card">
+  <div class="below-footer">
+    <div class="social-footer">
+      <div class="social-left">
+        <p>Find us on social media</p>
+      </div>
+      <div class="social-right">
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fas fa-envelope"></i>Mail</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Bottom 2 Card -->
+<div class="card">
+  <div class="footer-bottom2">
+    <a href="#">© 2025 Flex Coders</a>
+    <span>|</span>
+    <a href="#">User Agreement</a>
+    <span>|</span>
+    <a href="#">Terms & Conditions</a>
+    <span>|</span>
+    <a href="#">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Full Width Logo at Bottom -->
+<div class="footer-logo">
+  <img src="bg1.png" alt="Company Logo" class="footer-img">
+</div>
+
+
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>

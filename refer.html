@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexCoders </title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="style.css">
+    <style>
+        
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            height: 50vh;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 40px;
+            /* padding: 80px; */
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            margin-top: 25px;
+        }
+body.dark .container{
+  background-color: #000;
+}
+        .content {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .label {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        body.dark .label{
+          color: white;
+        }
+
+        h1 {
+            font-size: 68px;
+            font-weight: 700;
+            line-height: 1.1;
+            color: #000;
+            margin-bottom: 30px;
+        }
+        body.dark h1{
+          color: white;
+        }
+
+        .rupee {
+            font-family: Arial, sans-serif;
+        }
+
+        .subtext {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        body.dark  .subtext {color: #ddd;}
+
+        .cta-button {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 18px 45px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        body.dark .cta-button {
+          color: #050505;
+          background-color: #ddd;
+        }
+
+        .cta-button:hover {
+            background: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+body.dark .cta-button:hover {
+          background-color: white;
+}
+
+        .illustration {
+            flex: 1;
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .coins-stack {
+            position: relative;
+            width: 300px;
+            height: 350px;
+        }
+
+        .coin {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffa500 100%);
+            border: 4px solid #f4c430;
+            box-shadow: 0 8px 20px rgba(255, 165, 0, 0.3);
+        }
+
+        .coin::before {
+            content: '₹';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            font-weight: bold;
+            color: #f4a460;
+        }
+
+        .coin-shadow {
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            background: radial-gradient(ellipse, rgba(0, 0, 0, 0.15), transparent);
+            bottom: -15px;
+            border-radius: 50%;
+        }
+
+        /* Main stack */
+        .coin:nth-child(1) { bottom: 0; left: 50%; transform: translateX(-50%); z-index: 10; }
+        .coin:nth-child(2) { bottom: 35px; left: 50%; transform: translateX(-50%); z-index: 9; }
+        .coin:nth-child(3) { bottom: 70px; left: 50%; transform: translateX(-50%); z-index: 8; }
+        .coin:nth-child(4) { bottom: 105px; left: 50%; transform: translateX(-50%); z-index: 7; }
+        .coin:nth-child(5) { bottom: 140px; left: 50%; transform: translateX(-50%); z-index: 6; }
+
+        /* Left stack */
+        .coin:nth-child(6) { bottom: 0; left: 20%; z-index: 5; width: 80px; height: 80px; }
+        .coin:nth-child(7) { bottom: 30px; left: 20%; z-index: 4; width: 80px; height: 80px; }
+        .coin:nth-child(8) { bottom: 60px; left: 20%; z-index: 3; width: 80px; height: 80px; }
+
+        /* Right stack */
+        .coin:nth-child(9) { bottom: 0; right: 10%; z-index: 5; width: 85px; height: 85px; }
+        .coin:nth-child(10) { bottom: 32px; right: 10%; z-index: 4; width: 85px; height: 85px; }
+
+        /* Floating coins */
+        .floating-coin {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-coin:nth-child(11) {
+            top: 20px;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-coin:nth-child(12) {
+            top: 50%;
+            right: 0;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        @media (max-width: 968px) {
+            .container {
+                flex-direction: column;
+                padding: 60px 40px;
+                text-align: center;
+               
+            }
+
+            h1 {
+                font-size: 52px;
+            }
+
+            .content {
+                
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 480px){
+            .container{
+                flex-direction: column;
+                padding: 60px 40px;
+                text-align: center;
+               height: 200vh;
+            }
+        }
+
+.popup-form {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  animation: fadeIn 0.3s ease-in-out;
+
+  /* ✅ Allow scrolling when form is tall */
+  overflow-y: auto;
+  padding: 40px 0;
+}
+
+.form-content {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.4s ease;
+
+  /* ✅ Prevent content from sticking to edges */
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+body.dark  h
+
+
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close-btn:hover { color: #000; }
+
+.form-content input,
+.form-content textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.form-content input:focus,
+.form-content textarea:focus {
+  border-color: #000;
+}
+
+.submit-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.submit-btn:hover { background: #333; }
+
+.thank-you {
+  display: none;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.thank-you i {
+  font-size: 50px;
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+
+    </style>
+</head>
+<body class="light">
+  <!-- Clouds -->
+  <div class="clouds">
+    <div class="cloud red" style="width:300px;height:300px;top:10%;left:5%;--start-x:-200px;--start-y:0;--end-x:120vw;--end-y:30vh;animation-duration:20s;"></div>
+    <div class="cloud blue" style="width:350px;height:350px;top:40%;left:-20%;--start-x:-250px;--start-y:50px;--end-x:120vw;--end-y:-20vh;animation-duration:25s;"></div>
+    <div class="cloud green" style="width:250px;height:250px;top:70%;left:10%;--start-x:0;--start-y:100px;--end-x:100vw;--end-y:-50vh;animation-duration:15s;"></div>
+    <div class="cloud purple" style="width:400px;height:400px;top:20%;left:70%;--start-x:0;--start-y:-200px;--end-x:-120vw;--end-y:40vh;animation-duration:22s;"></div>
+    <div class="cloud orange" style="width:280px;height:280px;top:60%;left:60%;--start-x:100px;--start-y:300px;--end-x:-100vw;--end-y:-30vh;animation-duration:18s;"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="logo-light.png" alt="Company Logo" class="nav-logo" id="navLogo"></a>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="about.html">About</a>
+      <a href="program.html">Programs</a>
+      <a href="career.html">Career</a>
+      <a href="refer.html">Referrals</a>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <!-- Sun/Moon icons instead of text -->
+      <button class="theme-toggle" id="themeBtn" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+<!-- Navbar code -->
+
+<section id="refer-and-earn">
+  <div class="container">
+    <div class="content">
+      <div class="label">REFER</div>
+      <h1>Refer someone<br>and Earn upto<br><span class="rupee">₹</span>500</h1>
+      <p class="subtext">Cashback/Vouchers, on every successful<br>enrollment.</p>
+      <button class="cta-button">Start Referring</button>
+    </div>
+<!-- Referral Popup -->
+<div class="popup-form" id="referForm">
+  <div class="form-content">
+    <span class="close-btn">&times;</span>
+    <h2 style="color: #000;">Refer & Earn</h2>
+
+    <form id="referSheetForm">
+      <h4 style="color: #000;">Your Details</h4>
+      <input type="text" name="your_name" placeholder="Your Name" required>
+      <input type="tel" name="your_phone" placeholder="Your Phone Number" required>
+      <input type="email" name="your_email" placeholder="Your Email" required>
+
+      <h4 style="color: #000;">Referral Details</h4>
+      <input type="text" name="ref_name" placeholder="Referral's Name" required>
+      <input type="tel" name="ref_phone" placeholder="Referral's Phone Number" required>
+      <input type="email" name="ref_email" placeholder="Referral's Email" required>
+
+      <textarea name="message" placeholder="Message (optional)" rows="3"></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <!-- Thank You Message -->
+    <div class="thank-you" id="referThankYou">
+      <i class="fa-solid fa-circle-check"></i>
+      <h3 style="color: #000;">Thank You!</h3>
+      <p style="color: #000;">Your referral details have been submitted.<br>Our team will reach out soon.</p>
+    </div>
+  </div>
+</div>
+
+    <div class="illustration">
+      <div class="coins-stack">
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin"></div>
+        <div class="coin floating-coin"></div>
+        <div class="coin floating-coin"></div>
+        <div class="coin floating-coin"></div>
+        <div class="coin floating-coin"></div>
+        <div class="coin floating-coin"></div>
+        <div class="coin floating-coin"></div>
+        <div class="coin-shadow"></div>
+        <div class="coin-shadow"></div>
+        <div class="coin-shadow"></div>
+        <div class="coin-shadow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer code -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Above Footer Card -->
+  <div class="card">
+    <div class="above-footer">
+      <div class="af-content">
+        <img src="logo-light.png" alt="Company Logo" class="af-logo">
+        <h2>TECH STARTS HERE</h2>
+      </div>
+    </div>
+  </div>
+<!-- Main Footer Card -->
+<div class="card">
+  <div class="main-footer">
+    <div class="footer-columns">
+     <!-- Column 1: Address -->
+<div class="footer-column">
+  <h3>Address</h3>
+  <p><i class="fas fa-map-marker-alt"></i> 2nd floor, 100 Feet Rd, above Polaris Showroom, Ayyappa Society, Chanda Naik Nagar, Madhapur, Hyderabad, Telangana 500081</p>
+  <p><i class="fas fa-envelope"></i>support@flexcode.in</p>
+  <p><i class="fas fa-phone"></i> +91 12345 67890</p>
+</div>
+
+
+      <!-- Column 2: Explore -->
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Partner</a></p>
+        <p><a href="#">Contact Us</a></p>
+        <p><a href="#">Community</a></p>
+        <p><a href="#">Reviews</a></p>
+        <p><a href="#">Demo Session</a></p>
+        <p><a href="#">Verify Certificate</a></p>
+      </div>
+
+      <!-- Column 3: Programs -->
+      <div class="footer-column">
+        <h3>Programs</h3>
+        <p><a href="ds_gen_AI.html">Data Science With Gen AI</a></p>
+        <p><a href="data_analytics.html">Data Analytics</a></p>
+        <p><a href="FSD.html">Full Stack Development</a></p>
+        <p><a href="MERN.html">Mern Stack Development</a></p>
+        <p><a href="uiux.html">UI/UX Design</a></p>
+        <p><a href="sap.html">SAP</a></p>
+        <p><a href="dm.html">Digital Marketing</a></p>
+      </div>
+
+      <!-- Column 4: Company -->
+      <div class="footer-column">
+        <h3>Company</h3>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Blogs</a></p>
+        <p><a href="#">Career</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Below Footer Card -->
+<div class="card">
+  <div class="below-footer">
+    <div class="social-footer">
+      <div class="social-left">
+        <p>Find us on social media</p>
+      </div>
+      <div class="social-right">
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fas fa-envelope"></i>Mail</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Bottom 2 Card -->
+<div class="card">
+  <div class="footer-bottom2">
+    <a href="#">© 2025 Flex Coders</a>
+    <span>|</span>
+    <a href="#">User Agreement</a>
+    <span>|</span>
+    <a href="#">Terms & Conditions</a>
+    <span>|</span>
+    <a href="#">Privacy Policy</a>
+  </div>
+</div>
+
+<!-- Full Width Logo at Bottom -->
+<div class="footer-logo">
+  <img src="bg1.png" alt="Company Logo" class="footer-img">
+</div>
+
+
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+
+<script>
+  const referBtn = document.querySelector('.cta-button');
+  const referPopup = document.getElementById('referForm');
+  const referCloseBtn = referPopup.querySelector('.close-btn');
+  const referForm = document.getElementById('referSheetForm');
+  const referThankYou = document.getElementById('referThankYou');
+
+  // ✅ Show popup
+  referBtn.addEventListener('click', () => {
+    referPopup.style.display = 'flex';
+    referForm.style.display = 'block';
+    referThankYou.style.display = 'none';
+  });
+
+  // ✅ Close popup
+  referCloseBtn.addEventListener('click', () => referPopup.style.display = 'none');
+  window.addEventListener('click', (e) => {
+    if (e.target === referPopup) referPopup.style.display = 'none';
+  });
+
+  // ✅ Google Sheets Integration
+  const referScriptURL = 'https://script.google.com/macros/s/AKfycbyYw2DpGhjIUQiGY3OyiVVm7XNS3-Iam5U8XcYPropTjm4I_D_o9JIWDRHDaCUfIcwpmA/exec'; // Replace with your Google Apps Script URL
+
+  referForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const submitBtn = referForm.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'Submitting...';
+
+    fetch(referScriptURL, { method: 'POST', body: new FormData(referForm)})
+      .then(response => {
+        referForm.reset();
+        referForm.style.display = 'none';
+        referThankYou.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Submit';
+        setTimeout(() => referPopup.style.display = 'none', 2500);
+      })
+      .catch(error => {
+        referForm.style.display = 'none';
+        referThankYou.style.display = 'block';
+        setTimeout(() => referPopup.style.display = 'none', 2500);
+        console.error('Error!', error.message);
+      });
+  });
+</script>
+
+
+
+</body>
+</html>
