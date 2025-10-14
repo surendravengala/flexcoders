@@ -1661,7 +1661,7 @@ body.dark .main-title {
 }
 body.dark .subtitle,
 body.dark .feedback-label {
-    color: #babbbc; /* softer gray */
+    color: white; /* softer gray */
 }
 
 /* Google badge */

@@ -86,7 +86,7 @@
 
         .program_container .certificate-badge {
             position: absolute;
-            top: 40px;
+            top: 10px;
             right: 50px;
             background: white;
             padding: 12px 24px;
@@ -487,6 +487,13 @@ body.dark .program_container .section-title{
     grid-template-columns: 1fr !important; 
     gap: 20px; 
   }
+    .register-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 4%;
+    width: 100%;
+  }
 }
  </style>
 </head>
@@ -584,8 +591,9 @@ body.dark .program_container .section-title{
 
             <div class="divider"></div>
 
+          
             <button class="register-btn">
-                Register   <strike style="color: red;">₹ 50,000</strike>  <span style="color: #02f80f;"> ₹ 35,000</span> <span style="border-radius: 30px; padding: 5px; font-size: 14px; background-color: red;">30%off</span>
+                Register   <div> <strike style="color: red;">₹ 50,000</strike> <span style="color: #02f80f;"> ₹ 35,000</span></div> <span style="border-radius: 30px; padding: 5px; font-size: 14px; background-color: red;">30%off</span>
             </button>
         </div>
 

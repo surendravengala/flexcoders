@@ -85,7 +85,7 @@
 
         .program_container .certificate-badge {
             position: absolute;
-            top: 40px;
+            top: 15px;
             right: 50px;
             background: white;
             padding: 12px 24px;
@@ -95,7 +95,9 @@
             letter-spacing: 1px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
+body.dark .program_container .certificate-badge {
+    color: rgb(12, 12, 12);
+}
         .program_container .certificate-badge img {
             display: inline-block;
             height: 20px;
@@ -455,12 +457,12 @@ body.dark .program_container .section-title{
                 font-size: 10px;
             }
 
-            .certificate-badge, .stipend-badge {
-                position: static;
-                margin-top: 20px;
-                display: inline-block;
-            }
-
+            .certificate-badge{
+    width: 50%;
+    position: relative;
+    left: 170px;
+    margin-top: -20px;
+      }
             .program-info {
                 padding: 30px 25px;
             }
@@ -483,6 +485,13 @@ body.dark .program_container .section-title{
   .program_container .details-grid {
     grid-template-columns: 1fr !important; 
     gap: 20px; 
+  }
+    .register-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 4%;
+    width: 100%;
   }
 }
  </style>
@@ -581,8 +590,9 @@ body.dark .program_container .section-title{
 
             <div class="divider"></div>
 
+            
             <button class="register-btn">
-                Register   <strike style="color: red;">₹ 50,000</strike>  <span style="color: #02f80f;"> ₹ 35,000</span> <span style="border-radius: 30px; padding: 5px; font-size: 14px; background-color: red;">30%off</span>
+                Register   <div> <strike style="color: red;">₹ 50,000</strike> <span style="color: #02f80f;"> ₹ 35,000</span></div> <span style="border-radius: 30px; padding: 5px; font-size: 14px; background-color: red;">30%off</span>
             </button>
         </div>
 
