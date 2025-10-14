@@ -2291,7 +2291,13 @@ body.dark .right p{
   }
 }
 
-
+@media (max-width : 480px){
+  .man {
+ 
+  height: 400px;
+  width: 200px;
+}
+}
 
 .section_cards_container {
   width: 100%;
