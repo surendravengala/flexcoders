@@ -59,7 +59,7 @@ const courseCount = document.getElementById("courseCount");
 
 // const trendingCourses = ["Machine Learning", "Artificial Intelligence", "Python", "Data Science", "Microsoft Azure"];
 
-const trendingCourses = [ "Data Analytics", "SAP"];
+const trendingCourses = [ "Data Analytics", "Full Stack Development","Data Science"];
 
 // Function to update the count
 function updateCount(visibleCards) {
