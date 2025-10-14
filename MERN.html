@@ -497,6 +497,576 @@ body.dark .program_container .section-title{
     width: 100%;
   }
 }
+.curriculum_container {
+      color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0px;
+      min-height: 100vh;
+      width: 100%;
+      position: relative;
+      overflow-x: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+ 
+
+    .curriculum_container .main-card {
+      background: white; /* match plans-section */
+      border-radius: 20px;
+      padding: 60px;
+      width: 80%;
+      max-width: 1100px;
+      margin: 20px auto;
+      box-shadow: none; /* remove shadow to match plans-section */
+    }
+
+    /* --------- CURRICULUM SECTION ---------- */
+    .curriculum-section {
+      margin-bottom: 80px;
+    }
+
+    .small-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .curriculum_container .main-heading {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+
+    .curriculum-item {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 15px 0;
+    }
+
+    .curriculum-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .curriculum-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #888;
+      margin-bottom: 5px;
+    }
+
+    .curriculum-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #222;
+      padding-top: 20px;
+      padding-bottom: 8px;
+    }
+
+    .curriculum_container .toggle-btn {
+      font-size: 22px;
+      font-weight: bold;
+      color: #555;
+      transition: transform 0.3s;
+    }
+
+    .curriculum-content {
+      display: none;
+      color: #444;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    .curriculum-item.active .curriculum-content {
+      display: block;
+    }
+
+    .curriculum-item.active .toggle-btn {
+      transform: rotate(45deg);
+    }
+
+    /* middle */
+     .curriculum_container .middle {
+      width: 100%;
+      height: 2px;
+      background: #eee;
+      margin: 60px 0;
+    }
+
+    /* --------- REGISTRATION SECTION ---------- */
+    .curriculum_container .register-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      margin-top: 80px;
+
+    }
+
+    .curriculum_container .register-left {
+      flex: 1;
+    }
+
+    .curriculum_container .register-title {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .curriculum_container .register-heading {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      line-height: 1.3;
+    }
+
+   .curriculum_container  form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .curriculum_container input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
+      transition: border 0.3s ease;
+    }
+
+    .curriculum_container input:focus {
+      border-color: #0dbb6f;
+    }
+
+    .curriculum_container .phone-input {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .curriculum_container  .phone-input span {
+      background: #f2f2f2;
+      padding: 0 14px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    .curriculum_container .phone-input input {
+      border: none;
+      flex: 1;
+      padding: 14px;
+    }
+
+    .curriculum_container .submit-btn {
+      background: linear-gradient(90deg, #0dbb6f, #000);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .curriculum_container .submit-btn:hover .arrows {
+      margin-left: 6px;
+    }
+
+    .curriculum_container .arrows {
+      transition: margin-left 0.3s ease;
+    }
+
+    .curriculum_container .register-right {
+      flex: 1;
+      text-align: center;
+    }
+
+    .curriculum_container .ai-image {
+      width: 100%;
+      max-width: 380px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* Container */
+    .curriculum_container .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .curriculum_container .header {
+      text-align: center;
+      margin-bottom: 4rem;
+      
+      animation: fade-in-up 0.6s ease-out;
+    }
+
+    .curriculum_container .title {
+      font-size: 3.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: hsl(0, 0%, 0%);
+      text-align: center;
+
+    }
+
+    .curriculum_container .subtitle {
+      font-size: 1.25rem;
+      color: hsla(0, 0%, 0%, 0.8);
+      text-align: center;
+
+    }
+
+    /* Pricing Grid - responsive row (no horizontal scroll) */
+    .curriculum_container .pricing-grid {
+      display: flex;
+      gap: 1rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      align-items: stretch;
+      justify-content: center;
+      flex-wrap: wrap; /* allow wrapping on small screens */
+      padding: 1rem 0;
+    }
+
+    /* Pricing Card */
+    .curriculum_container .pricing-card {
+      position: relative;
+      animation: fade-in-up 0.6s ease-out both;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      flex: 1 1 320px; /* grow/shrink, base 320px */
+      max-width: 300px;
+    }
+
+    .curriculum_container .pricing-card:hover {
+      transform: scale(1.05) translateY(-0.5rem);
+    }
+
+    /* Badge */
+    .curriculum_container .badge {
+      position: absolute;
+      top: -1.5rem;
+      /* left: 50%; */
+      transform: translateX(-50%);
+      z-index: 10;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .curriculum_container .badge h3 {
+      background: linear-gradient(135deg, hsl(35, 100%, 50%), hsl(45, 100%, 60%));
+      padding: 0.75rem 3rem;
+      border-radius: 9999px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: hsl(0, 0%, 10%);
+      box-shadow: 0 10px 30px -10px hsla(0, 0%, 0%, 0.4);
+    }
+
+    /* Card Content */
+    .curriculum_container .card-content {
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 2rem;
+      padding: 2rem;
+      padding-top: 4rem;
+      min-height: 600px;
+      box-shadow: 0 20px 60px -10px hsla(0, 0%, 0%, 0.3);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .curriculum_container .pricing-card:hover .card-content {
+      box-shadow: 0 0 40px hsla(100, 100%, 50%, 0.2);
+    }
+
+    /* Features List */
+    .curriculum_container .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .curriculum_container .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      transition: transform 0.3s ease;
+    }
+
+    .curriculum_container .feature-item:hover {
+      transform: translateX(0.25rem);
+    }
+
+    /* Icon Wrapper */
+    .curriculum_container .icon-wrapper {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .curriculum_container .feature-item:hover .icon-wrapper {
+      transform: scale(1.1);
+      animation: check-bounce 0.5s ease-in-out;
+    }
+
+    .curriculum_container .icon-wrapper.success {
+      background-color: hsla(100, 100%, 50%, 0.2);
+    }
+
+    .curriculum_container .icon-wrapper.error {
+      background-color: hsla(0, 100%, 50%, 0.2);
+    }
+
+    .curriculum_container .icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    .icon-wrapper.success .icon {
+      color: hsl(100, 100%, 50%);
+    }
+
+    .curriculum_container .icon-wrapper.error .icon {
+      color: hsl(0, 100%, 50%);
+    }
+
+    .curriculum_container .feature-item span {
+      color: hsl(0, 0%, 10%);
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+   
+    /* Card Styles */
+.curriculum_container .card {
+  position: relative;
+  background-color: #00aa09;
+  color: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  width: 350px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.curriculum_container .card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(0,255,255,0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.curriculum_container .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(8, 60, 0, 0.638);
+}
+
+.curriculum_container .card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.curriculum_container .card-overlay-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 4rem;
+  font-weight: 900;
+  opacity: 0.08;
+  line-height: 1.1;
+  color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+   .curriculum_container .card-body {
+      position: relative;
+      z-index: 2;
+    }
+
+.curriculum_container .trending-label {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.curriculum_container .card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-top: 20px;
+}
+.curriculum_container .plans-section{
+  background-color: white;
+  border-radius: 20px;
+  width: 80%;
+}
+
+
+    /* Animations */
+    @keyframes fade-in-up {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    @keyframes check-bounce {
+
+      0%,
+      100% {
+        transform: scale(1.1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .curriculum_container .pricing-grid {
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .curriculum_container .title {
+        font-size: 2.5rem;
+      }
+
+      .curriculum_container .subtitle {
+        font-size: 1.125rem;
+      }
+
+      .curriculum_container .badge h3 {
+        font-size: 1.25rem;
+        padding: 0.625rem 2.5rem;
+      }
+
+      .curriculum_container .card-content {
+        padding: 1.5rem;
+        padding-top: 3.5rem;
+      }
+
+     .curriculum_container .feature-item span {
+        font-size: 1rem;
+      }
+
+      .curriculum_container .container {
+        padding: 4rem 1rem;
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .curriculum_container .register-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .curriculum_container .register-left {
+        order: 1;
+      }
+
+      .curriculum_container .register-right {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .curriculum_container .main-card {
+        width: 95%;
+        /* for smaller screens */
+        padding: 40px 25px;
+      }
+    }
+
+
  </style>
 </head>
 <body class="light">
@@ -724,7 +1294,459 @@ body.dark .program_container .section-title{
 
 
 
+<div class="curriculum_container">
+     <section class="main-card">
+    <!-- Curriculum Section -->
+    <div class="curriculum-section">
+      <h5 class="small-title">CURRICULUM</h5>
+      <h1 class="main-heading">Know your course<br>curriculum</h1>
 
+      <div class="curriculum-list">
+        <div class="curriculum-item">
+          <div class="curriculum-header">
+            <div>
+              <p class="curriculum-label">Curriculum 1</p>
+              <p class="curriculum-title">
+                Introduction to Artificial Intelligence Python IDLE, PyCharm and Jupyter Notebook
+              </p>
+            </div>
+            <span class="toggle-btn">+</span>
+          </div>
+          <div class="curriculum-content">
+            <p>Learn the basics of AI tools, Python setup, and integrated development environments to start coding AI
+              programs efficiently.</p>
+          </div>
+        </div>
+
+        <div class="curriculum-item">
+          <div class="curriculum-header">
+            <div>
+              <p class="curriculum-label">Curriculum 2</p>
+              <p class="curriculum-title">
+                Statistics : Descriptive vs Inferential, Sample vs Population, Mean Median Mode Exploratory Data
+                Analysis
+              </p>
+            </div>
+            <span class="toggle-btn">+</span>
+          </div>
+          <div class="curriculum-content">
+            <p>Understand data analysis techniques and core statistical concepts that form the foundation of AI and ML
+              models.</p>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-header">
+            <div>
+              <p class="curriculum-label">Curriculum 3</p>
+              <p class="curriculum-title">
+                Usage of Sklearn library in ML - Types of ML (Supervised vs Unsupervised)
+              </p>
+            </div>
+            <span class="toggle-btn">+</span>
+          </div>
+          <div class="curriculum-content">
+            <p>Hands-on with Scikit-learn for data preprocessing and model building.</p>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-header">
+            <div>
+              <p class="curriculum-label">Curriculum 4</p>
+              <p class="curriculum-title">
+                Logistic Regression for Binomial Category, Normalization and Scaling, Confusion Matrix.
+              </p>
+            </div>
+            <span class="toggle-btn">+</span>
+          </div>
+          <div class="curriculum-content">
+            <p>Understand logistic regression and model evaluation techniques.</p>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-header">
+            <div>
+              <p class="curriculum-label">Curriculum 5</p>
+              <p class="curriculum-title">
+                Decision Tree Algorithm, Concept of Entropy and Gain, Running a classifier from sklearn library
+              </p>
+            </div>
+            <span class="toggle-btn">+</span>
+          </div>
+          <div class="curriculum-content">
+            <p>Learn decision tree algorithm implementation and evaluation.</p>
+          </div>
+        </div>
+        <div class="curriculum-item">
+          <div class="curriculum-header">
+            <div>
+              <p class="curriculum-label">Curriculum 6</p>
+              <p class="curriculum-title">
+                Usage of Sklearn library in ML Types of ML - Supervised vs Unsupervised
+              </p>
+            </div>
+            <span class="toggle-btn">+</span>
+          </div>
+          <div class="curriculum-content">
+            <p>Get hands-on experience using Scikit-learn for building Machine Learning models and understanding core ML
+              types.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="middle"></div>
+    <!-- Registration Section -->
+    <div class="register-section">
+      <div class="register-left">
+        <h4 class="register-title">REGISTER NOW</h4>
+        <h2 class="register-heading">Like the<br>curriculum?</h2>
+
+        <form id="registerForm">
+          <input type="text" id="fullName" placeholder="Full Name" required>
+          <input type="text" id="collegeName" placeholder="Email" required>
+
+          <div class="phone-input">
+            <span>+91</span>
+            <input type="tel" id="phoneNumber" placeholder="Phone Number" required pattern="[0-9]{10}">
+          </div>
+
+          <button type="submit" class="submit-btn">
+            Submit <span class="arrows">»»»</span>
+          </button>
+        </form>
+      </div>
+
+      <div class="card">
+        <div class="card-overlay-text">ARTIFICIAL INTELLIGENCE</div>
+        <div class="card-body">
+          <!-- <span class="trending-label">TRENDING · CS</span> -->
+          <h1 class="card-title">Artificial Intelligence</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Plans Section -->
+  <section class="plans-section">
+    <!-- Main Content -->
+    <div class="container">
+      <div class="header">
+        <h1 class="title">Choose Your Plan</h1>
+        <p class="subtitle">Select the perfect package for your learning journey</p>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="pricing-grid">
+        <!-- Basic Plan -->
+        <div class="pricing-card" style="animation-delay: 0ms">
+          <div class="badge">
+            <h3>Basic</h3>
+          </div>
+          <div class="card-content">
+            <ul class="features-list">
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>60 + hours Recorded sessions</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>6 months LMS access</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Course Completion Certificate</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Internship Certificate</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Capstone project</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper error">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </div>
+                <span>No Doubt Sessions</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper error">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </div>
+                <span>Mock Interviews</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper error">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </div>
+                <span>Placement Assistance</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper error">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </div>
+                <span>Soft Skills Training</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper error">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </div>
+                <span>Portfolio building</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="pricing-card" style="animation-delay: 200ms">
+          <div class="badge">
+            <h3>Standard</h3>
+          </div>
+          <div class="card-content">
+            <ul class="features-list">
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>60 + hours Recorded sessions</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>12 - 18 months LMS access</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Course Completion Certificate</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Internship Certificate</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Capstone project</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Real Time projects</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Doubt Sessions</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Mock Interviews</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Placement Assistance upto 3-5 Reference</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Portfolio building</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="pricing-card" style="animation-delay: 400ms">
+          <div class="badge">
+            <h3>Premium</h3>
+          </div>
+          <div class="card-content">
+            <ul class="features-list">
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Live Sessions (Offline/Online)</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Life Time LMS access</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>offline Doubt Sessions</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Capstone project</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Real Time projects</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>20 +Mock Interviews</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Placement Assistance</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Access for placement drives</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Soft Skills Training</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Portfolio building</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Course Completion Certificate</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>Internship Certificate</span>
+              </li>
+              <li class="feature-item">
+                <div class="icon-wrapper success">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <span>End to End Support</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Glow Effects -->
+    <div class="glow-effect glow-left"></div>
+    <div class="glow-effect glow-right"></div>
+  </section>
+
+ </div>
 
 
 
@@ -760,22 +1782,22 @@ body.dark .program_container .section-title{
      <!-- Column 1: Address -->
 <div class="footer-column">
   <h3>Address</h3>
-  <p><i class="fas fa-map-marker-alt"></i>2nd floor, Jaya Sudha Heights, Plot No. 462, 100 Feet Rd, behind Annapurna Mess Lane, Chanda Naik Nagar, Madhapur, Hyderabad, Telangana 500081</p>
+  <p><i class="fas fa-map-marker-alt"></i>2nd floor,<br> Jaya Sudha Heights,<br> Plot No. 462,<br> 100 Feet Rd,<br> behind Annapurna Mess Lane,<br> Chanda Naik Nagar,<br> Madhapur, Hyderabad, Telangana 500081</p>
   <p><i class="fas fa-envelope"></i>info@flexcoders.in</p>
   <p><i class="fas fa-phone"></i> +91 6281642951, 9989783404</p>
 </div>
 
 
-      <!-- Column 2: Explore -->
+       <!-- Column 2: Explore -->
       <div class="footer-column">
         <h3>Explore</h3>
         <p><a href="index.html">Home</a></p>
-        <p><a href="#">Partner</a></p>
-        <p><a href="#">Contact Us</a></p>
-        <p><a href="#">Community</a></p>
-        <p><a href="#">Reviews</a></p>
-        <p><a href="#">Demo Session</a></p>
-        <p><a href="#">Verify Certificate</a></p>
+        <!-- <p><a href="#">Partner</a></p> -->
+        <p><a href="index.html#contact">Contact Us</a></p>
+        <!-- <p><a href="#">Community</a></p> -->
+        <p><a href="index.html#feedback">Reviews</a></p>
+        <p><a href="index.html#contact">Demo Session</a></p>
+        <!-- <p><a href="#">Verify Certificate</a></p> -->
       </div>
 
       <!-- Column 3: Programs -->
@@ -794,8 +1816,10 @@ body.dark .program_container .section-title{
       <div class="footer-column">
         <h3>Company</h3>
         <p><a href="about.html">About Us</a></p>
-        <p><a href="#">Blogs</a></p>
+        <p><a href="program.html">Programs</a></p>
         <p><a href="career.html">Career</a></p>
+        <p><a href="refer.html">Referral</a></p>
+
       </div>
     </div>
   </div>
@@ -841,5 +1865,37 @@ body.dark .program_container .section-title{
 
   <!-- External JS -->
   <script src="script.js"></script>
+  <script>
+     // Toggle curriculum accordion
+    const items = document.querySelectorAll(".curriculum-item");
+    items.forEach(item => {
+      item.querySelector(".curriculum-header").addEventListener("click", () => {
+        item.classList.toggle("active");
+      });
+    });
+
+    // Simple form validation
+    document.getElementById("registerForm").addEventListener("submit", e => {
+      e.preventDefault();
+
+      const name = document.getElementById("fullName").value.trim();
+      const college = document.getElementById("collegeName").value.trim();
+      const phone = document.getElementById("phoneNumber").value.trim();
+
+      if (!name || !college || !phone) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      if (!/^\d{10}$/.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return;
+      }
+
+      alert(`✅ Thank you, ${name}! Your registration has been submitted.`);
+      document.getElementById("registerForm").reset();
+    });
+  
+</script>
 </body>
 </html>
