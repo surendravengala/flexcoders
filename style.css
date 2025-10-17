@@ -2473,3 +2473,126 @@ body.dark .right p{
 
 
 body.dark .section_cards_container > .card {background-color: #000; color: white;}
+
+
+
+
+
+
+
+/* ===== POPUP BACKDROP ===== */
+.popup-form {
+  display: none; /* Hidden by default */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ===== POPUP CARD ===== */
+.form-content {
+  background: #fff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  width: 400px;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.35s ease-out;
+}
+
+/* ===== CLOSE BUTTON ===== */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: #ff4d4d;
+}
+
+/* ===== HEADING ===== */
+.form-content h2 {
+  margin-bottom: 18px;
+  color: #111;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ===== FORM INPUTS ===== */
+.form-content input,
+.form-content select {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0 18px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background-color: #f9f9f9;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-content input:focus,
+.form-content select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+  background-color: #fff;
+}
+
+/* ===== DROPDOWN ===== */
+.form-content select {
+  appearance: none;
+  cursor: pointer;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #111, #333);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.submit-btn:hover {
+  background: linear-gradient(135deg, #333, #000);
+  transform: translateY(-2px);
+}
+
+/* ===== SUCCESS MESSAGE ===== */
+#successMsg {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #28a745;
+  display: none;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+
+
+
+
+

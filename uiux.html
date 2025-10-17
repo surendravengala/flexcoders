@@ -15,7 +15,7 @@
 
         /* Hero Section Styles */
         .program_container .hero-card {
-            background: linear-gradient(135deg, #2962ff 0%, #1565c0 100%);
+            background: #FF6969;
             border-radius: 24px;
             padding: 60px 50px;
             position: relative;
@@ -665,7 +665,7 @@ body.dark .program_container .section-title{
     }
 
     .curriculum_container .submit-btn {
-      background: linear-gradient(90deg, #0dbb6f, #000);
+      background:  #0dbb6f;
       color: #fff;
       border: none;
       padding: 14px;
@@ -857,7 +857,7 @@ body.dark .program_container .section-title{
     /* Card Styles */
 .curriculum_container .card {
   position: relative;
-  background-color: #00aa09;
+  background-color: #FF6969;
   color: white;
   padding: 2.5rem;
   border-radius: 1rem;
@@ -1059,6 +1059,31 @@ body.dark .program_container .section-title{
       }
     }
 
+
+.form-message {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.form-message.success {
+  color: #0f9d58;
+}
+
+.form-message.error {
+  color: #d93025;
+}
+
+.form-message.loading {
+  color: #007bff;
+}
+
+/* fade out animation */
+.form-message.fade-out {
+  opacity: 0;
+}
 
  </style>
 </head>
@@ -1300,90 +1325,113 @@ body.dark .program_container .section-title{
             <div>
               <p class="curriculum-label">Curriculum 1</p>
               <p class="curriculum-title">
-                Introduction to Artificial Intelligence Python IDLE, PyCharm and Jupyter Notebook
+Fundamentals of UI/UX
+
               </p>
             </div>
-            <span class="toggle-btn">+</span>
-          </div>
-          <div class="curriculum-content">
-            <p>Learn the basics of AI tools, Python setup, and integrated development environments to start coding AI
-              programs efficiently.</p>
           </div>
         </div>
 
-        <div class="curriculum-item">
+        
+      <div class="curriculum-item">
           <div class="curriculum-header">
             <div>
               <p class="curriculum-label">Curriculum 2</p>
               <p class="curriculum-title">
-                Statistics : Descriptive vs Inferential, Sample vs Population, Mean Median Mode Exploratory Data
-                Analysis
+
+User Research & Personas
+
               </p>
             </div>
-            <span class="toggle-btn">+</span>
-          </div>
-          <div class="curriculum-content">
-            <p>Understand data analysis techniques and core statistical concepts that form the foundation of AI and ML
-              models.</p>
           </div>
         </div>
-        <div class="curriculum-item">
+
+        
+      <div class="curriculum-item">
           <div class="curriculum-header">
             <div>
               <p class="curriculum-label">Curriculum 3</p>
               <p class="curriculum-title">
-                Usage of Sklearn library in ML - Types of ML (Supervised vs Unsupervised)
+
+Wireframing & Prototyping
+
               </p>
             </div>
-            <span class="toggle-btn">+</span>
-          </div>
-          <div class="curriculum-content">
-            <p>Hands-on with Scikit-learn for data preprocessing and model building.</p>
           </div>
         </div>
-        <div class="curriculum-item">
+
+        
+      <div class="curriculum-item">
           <div class="curriculum-header">
             <div>
               <p class="curriculum-label">Curriculum 4</p>
               <p class="curriculum-title">
-                Logistic Regression for Binomial Category, Normalization and Scaling, Confusion Matrix.
+Visual Design
+
+
               </p>
             </div>
-            <span class="toggle-btn">+</span>
-          </div>
-          <div class="curriculum-content">
-            <p>Understand logistic regression and model evaluation techniques.</p>
           </div>
         </div>
-        <div class="curriculum-item">
+
+        
+      <div class="curriculum-item">
           <div class="curriculum-header">
             <div>
               <p class="curriculum-label">Curriculum 5</p>
               <p class="curriculum-title">
-                Decision Tree Algorithm, Concept of Entropy and Gain, Running a classifier from sklearn library
+Interaction Design
+
+
               </p>
             </div>
-            <span class="toggle-btn">+</span>
-          </div>
-          <div class="curriculum-content">
-            <p>Learn decision tree algorithm implementation and evaluation.</p>
           </div>
         </div>
-        <div class="curriculum-item">
+
+        
+      <div class="curriculum-item">
           <div class="curriculum-header">
             <div>
               <p class="curriculum-label">Curriculum 6</p>
               <p class="curriculum-title">
-                Usage of Sklearn library in ML Types of ML - Supervised vs Unsupervised
+Design Thinking Process
+
+
               </p>
             </div>
-            <span class="toggle-btn">+</span>
-          </div>
-          <div class="curriculum-content">
-            <p>Get hands-on experience using Scikit-learn for building Machine Learning models and understanding core ML
-              types.</p>
           </div>
         </div>
+
+        
+      <div class="curriculum-item">
+          <div class="curriculum-header">
+            <div>
+              <p class="curriculum-label">Curriculum 7</p>
+              <p class="curriculum-title">
+
+Collaboration Tools
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        
+      <div class="curriculum-item">
+          <div class="curriculum-header">
+            <div>
+              <p class="curriculum-label">Curriculum 8</p>
+              <p class="curriculum-title">
+
+Portfolio Projects
+              </p>
+            </div>
+          </div>
+        </div>
+
+   
+        
+      
       </div>
     </div>
     <div class="middle"></div>
@@ -1406,13 +1454,15 @@ body.dark .program_container .section-title{
             Submit <span class="arrows">»»»</span>
           </button>
         </form>
+        <p id="formMessage" class="form-message"></p>
+
       </div>
 
       <div class="card">
-        <div class="card-overlay-text">ARTIFICIAL INTELLIGENCE</div>
+        <div class="card-overlay-text">UI/UX Design</div>
         <div class="card-body">
           <!-- <span class="trending-label">TRENDING · CS</span> -->
-          <h1 class="card-title">Artificial Intelligence</h1>
+          <h1 class="card-title">UI/UX Design</h1>
         </div>
       </div>
     </div>
@@ -1839,11 +1889,11 @@ body.dark .program_container .section-title{
   <div class="footer-bottom2">
     <a href="#">© 2025 Flex Coders</a>
     <span>|</span>
-    <a href="#">User Agreement</a>
+    <a href="user_agreement.html">User Agreement</a>
     <span>|</span>
-    <a href="#">Terms & Conditions</a>
+    <a href="terms_conditions.html">Terms & Conditions</a>
     <span>|</span>
-    <a href="#">Privacy Policy</a>
+    <a href="privacy_policy.html">Privacy Policy</a>
   </div>
 </div>
 
@@ -1865,27 +1915,70 @@ body.dark .program_container .section-title{
       });
     });
 
-    // Simple form validation
-    document.getElementById("registerForm").addEventListener("submit", e => {
-      e.preventDefault();
+    
+// registerForm
+document.getElementById("registerForm").addEventListener("submit", e => {
+  e.preventDefault();
 
-      const name = document.getElementById("fullName").value.trim();
-      const college = document.getElementById("collegeName").value.trim();
-      const phone = document.getElementById("phoneNumber").value.trim();
+  const name = document.getElementById("fullName").value.trim();
+  const email = document.getElementById("collegeName").value.trim();
+  const phone = document.getElementById("phoneNumber").value.trim();
+  const msg = document.getElementById("formMessage");
 
-      if (!name || !college || !phone) {
-        alert("Please fill in all fields.");
-        return;
-      }
+  // Reset message before validation
+  msg.textContent = "";
+  msg.className = "form-message";
 
-      if (!/^\d{10}$/.test(phone)) {
-        alert("Please enter a valid 10-digit phone number.");
-        return;
-      }
+  if (!name || !email || !phone) {
+    msg.textContent = "⚠️ Please fill in all fields.";
+    msg.classList.add("error");
+    hideMessageAfterDelay(msg);
+    return;
+  }
 
-      alert(`✅ Thank you, ${name}! Your registration has been submitted.`);
-      document.getElementById("registerForm").reset();
-    });
+  if (!/^\d{10}$/.test(phone)) {
+    msg.textContent = "⚠️ Please enter a valid 10-digit phone number.";
+    msg.classList.add("error");
+    hideMessageAfterDelay(msg);
+    return;
+  }
+
+  // Show instant success feedback
+  msg.textContent = "⏳ Submitting your registration...";
+  msg.classList.add("loading");
+
+  // Send data to Google Sheets
+  fetch("https://script.google.com/macros/s/AKfycbyK3yHfd9Dq2bDylhLkzjiyq1CSvTNiueLdQc-dwnoxX2TSQSO1z9H5T-jjxVgv3wWi/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, phone }),
+  })
+  .then(() => {
+    msg.textContent = `✅ Thank you, ${name}! Your registration has been submitted.`;
+    msg.className = "form-message success";
+    document.getElementById("registerForm").reset();
+    hideMessageAfterDelay(msg);
+  })
+  .catch(err => {
+    msg.textContent = "❌ Something went wrong. Please try again.";
+    msg.className = "form-message error";
+    console.error(err);
+    hideMessageAfterDelay(msg);
+  });
+});
+
+// Utility function to hide message after few seconds
+function hideMessageAfterDelay(element) {
+  setTimeout(() => {
+    element.classList.add("fade-out");
+    setTimeout(() => {
+      element.textContent = "";
+      element.classList.remove("fade-out");
+    }, 500);
+  }, 4000);
+}
+
   
 </script>
 </body>

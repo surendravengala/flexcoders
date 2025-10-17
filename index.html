@@ -454,8 +454,9 @@ Trainer is teaching good.                    </div>
         <button><i class="fa-solid fa-bolt"></i> Request</button>
       </div>
 
-      <a href="#" style="text-decoration: none; color: black;"><button id="b1">Request <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+      <button id="b1" style="text-decoration: none; color: black;">Request <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
     </div>
+
 
     <!-- Card 2 -->
     <div class="card">
@@ -499,7 +500,21 @@ Trainer is teaching good.                    </div>
   </div>
 
 
-
+<!-- keep popupForm OUTSIDE -->
+<div class="popup-form" id="popupForm">
+  <div class="form-content">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <h2>Request a Demo</h2>
+    <form id="requestForm">
+      <input type="text" id="name" name="name" placeholder="Full Name" required>
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+      <input type="email" id="email" name="email" placeholder="Email ID" required>
+      <input type="date" id="date" name="date" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="message" style="display:none; color:green; margin-top:10px;">✅ Thank you! Your request has been submitted.</p>
+  </div>
+</div>
 
 
 
@@ -591,11 +606,11 @@ Trainer is teaching good.                    </div>
   <div class="footer-bottom2">
     <a href="#">© 2025 Flex Coders</a>
     <span>|</span>
-    <a href="#">User Agreement</a>
+    <a href="user_agreement.html">User Agreement</a>
     <span>|</span>
-    <a href="#">Terms & Conditions</a>
+    <a href="terms_conditions.html">Terms & Conditions</a>
     <span>|</span>
-    <a href="#">Privacy Policy</a>
+    <a href="privacy_policy.html">Privacy Policy</a>
   </div>
 </div>
 
@@ -634,7 +649,7 @@ Trainer is teaching good.                    </div>
   });
 
   // ✅ Google Sheets Integration
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyyrIleXmKvnj0vDvthAdpx-7ell0TNr0ATk4blV11y0Z1oPNFp2ojaLtD2gZkcMNvrXA/exec'; // Replace with your script URL
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxarMLN4Zh-mlNALcpZBLttpJgpllFEp9p5m70sGCBF1ugbrSQ5R7Gf8IEFsUAlXX312A/exec'; // Replace with your script URL
 
   form.addEventListener('submit', e => {
     e.preventDefault();
@@ -666,7 +681,76 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbyyrIleXmKvnj0vDvthAd
         console.error('Error!', error.message);
       });
   });
+
+
+
+
+
+// demo
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const popup = document.getElementById("popupForm");
+  const openBtn = document.getElementById("b1");
+  const closeBtn = document.getElementById("closeBtn");
+  const form = document.getElementById("requestForm");
+  const msg = document.getElementById("message");
+
+  // ✅ Open popup
+  openBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    popup.style.display = "flex";
+  });
+
+  // ✅ Close popup
+  closeBtn.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  // ✅ Form submission
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const date = document.getElementById("date").value.trim();
+
+    // 🟢 REPLACE with your deployed script URL below:
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwhLf9OnCr39M6mBO8wR1qqmUXHVZZoxDx4gyOb5BeiUfKyU_YeJ_HvuIkltSH6S6z_fg/exec";
+
+    fetch(scriptURL, {
+      method: "POST",
+      mode: "no-cors", // prevents CORS errors
+      body: JSON.stringify({ name, phone, email, date }),
+      headers: { "Content-Type": "application/json" },
+    })
+    .then(() => {
+      msg.style.display = "block";
+      form.reset();
+      setTimeout(() => {
+        msg.style.display = "none";
+        popup.style.display = "none";
+      }, 2000);
+    })
+    .catch(err => console.error("Error:", err));
+  });
+});
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
